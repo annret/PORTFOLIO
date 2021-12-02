@@ -1,0 +1,149 @@
+// styling for the hero section
+
+#hero-mobile {
+  display: none;
+}
+
+#hero {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+  .left {
+    max-width: 50%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 50%;
+
+    .box {
+      &-primary {
+        position: absolute;
+        height: 80vh;
+        width: clamp(100%, 50vw, 50vw);
+        background: $primary;
+        box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
+        border-bottom-right-radius: 0.1rem;
+        z-index: -2;
+      }
+    }
+    .firstname {
+      font-family: "Caviar Dreams Bold";
+      padding-top: 40vh;
+      color: $black;
+      font-size: 1rem;
+      padding-right: 5px;
+      z-index: 10;
+    }
+  }
+
+  .right {
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding-left: 15px;
+
+    .lastname {
+      font-family: "Caviar Dreams Bold";
+      color: $primary;
+      font-size: 1rem;
+      padding-top: 40vh;
+      padding-right: 1rem;
+      z-index: 10;
+    }
+    .subtitle {
+      font-family: "Caviar Dreams";
+      color: $black;
+      font-size: 0.5rem;
+      margin-top: 0%;
+      z-index: 10;
+    }
+  }
+}
+
+//mobile
+@media (max-width: 480px) {
+  #hero {
+    display: none;
+  }
+
+  #hero-mobile {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+    .left {
+      max-width: 50%;
+      display: flex;
+      justify-self: flex-start;
+      align-items: flex-start;
+      position: relative;
+      height: 100vh;
+      width: 50%;
+
+      .box {
+        &-top-left {
+          position: absolute;
+          height: 35vh;
+          width: clamp(100%, 50vw, 50vw);
+          background: $primary;
+          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
+          border-bottom-right-radius: 0.1rem;
+          z-index: -2;
+        }
+      }
+    }
+
+    .firstname {
+      position: absolute;
+      top: 42%;
+      left: 38%;
+      font-family: "Caviar Dreams Bold";
+      color: $black;
+      font-size: 2rem;
+      z-index: 10;
+    }
+    .lastname {
+      position: absolute;
+      top: 47%;
+      left: 17%;
+      font-family: "Caviar Dreams Bold";
+      color: $primary;
+      font-size: 2rem;
+      z-index: 10;
+    }
+    .subtitle {
+      position: absolute;
+      top: 54%;
+      left: 33%;
+      font-family: "Caviar Dreams";
+      color: $black;
+      font-size: 1rem;
+      z-index: 10;
+    }
+
+    .right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      position: relative;
+      height: 100vh;
+      width: 50%;
+
+      .box {
+        &-bottom-right {
+          position: absolute;
+          height: 35vh;
+          width: clamp(100%, 50vw, 50vw);
+          background: $primary;
+          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
+          border-bottom-right-radius: 0.1rem;
+          z-index: -2;
+        }
+      }
+    }
+  }
+}

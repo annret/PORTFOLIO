@@ -1,0 +1,272 @@
+// styling for the timeline section
+
+#timeline1-mobile,
+#timeline2-mobile {
+  display: none;
+}
+
+#timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 200vh;
+  width: 100%;
+  padding-top: 1rem;
+  flex-wrap: wrap;
+
+  .backgroundcontainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .background20 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      font-family: "Caviar Dreams Bold";
+      color: $primary;
+      width: 100%;
+      height: 100vh;
+      font-size: 12rem;
+      opacity: 0.2;
+      z-index: -2;
+    }
+  }
+
+  .flexcontainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    .line {
+      height: 2vh;
+      width: 100%;
+      background: $primary;
+      z-index: -1;
+    }
+    .flex {
+      max-width: 33%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+      width: 33%;
+
+      .year {
+        font-family: "Caviar Dreams Bold";
+        color: $black;
+        font-size: 2rem;
+        padding-bottom: 1.5rem;
+        writing-mode: vertical-lr;
+        z-index: 10;
+      }
+      p {
+        font-family: "Caviar Dreams";
+        color: $black;
+        font-size: 0.45rem;
+        padding: 0.2rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        z-index: 10;
+      }
+
+      .ongoing {
+        font-family: "Caviar Dreams Bold";
+        color: $primary;
+        font-size: 0.35rem;
+        padding: 0.1rem;
+      }
+    }
+    .flex-year {
+      display: flex;
+      align-items: center !important;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #timeline {
+    .flex-left {
+      .line {
+        top: 20%;
+      }
+    }
+    .flex-middle {
+      .line {
+        top: 20%;
+      }
+    }
+    .flex-right {
+      .line {
+        top: 20%;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  #timeline {
+    .flex-left {
+      .line {
+        top: 15%;
+      }
+    }
+    .flex-middle {
+      .line {
+        top: 15%;
+      }
+    }
+    .flex-right {
+      .line {
+        top: 15%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #timeline {
+    .flex-left {
+      .line {
+        top: 10%;
+      }
+    }
+    .flex-middle {
+      .line {
+        top: 10%;
+      }
+    }
+    .flex-right {
+      .line {
+        top: 10%;
+      }
+    }
+  }
+}
+
+//mobile
+@media (max-width: 480px) {
+  #timeline {
+    display: none;
+  }
+
+  #timeline1-mobile {
+    height: 71vh;
+  }
+  #timeline2-mobile {
+    height: 100vh;
+  }
+
+  #timeline1-mobile,
+  #timeline2-mobile {
+    width: 100%;
+    display: flex;
+
+    .background20 {
+      //position: fixed;
+      position: absolute;
+      top: 540%;
+      left: 1rem;
+      font-family: "Caviar Dreams Bold";
+      writing-mode: vertical-lr;
+      color: $primary;
+      font-size: 16rem;
+      opacity: 0.2;
+      z-index: -2;
+    }
+
+    .title {
+      position: absolute;
+      top: 515%;
+      left: 26%;
+      font-family: "Caviar Dreams Bold";
+      color: $black;
+      font-size: 2rem;
+      z-index: 10;
+    }
+
+    .left {
+      max-width: 30%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+      height: 100vh;
+      width: 30%;
+
+      .box {
+        &-top-left {
+          position: absolute;
+          height: 35vh;
+          width: clamp(100%, 50vw, 50vw);
+          background: $primary;
+          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
+          border-bottom-right-radius: 0.1rem;
+          z-index: -2;
+        }
+      }
+
+      .top {
+        padding-top: 18rem;
+      }
+      .year {
+        font-family: "Caviar Dreams Bold";
+        color: $black;
+        font-size: 2rem;
+        padding: 0.5rem;
+        padding-bottom: 6rem;
+        z-index: 10;
+      }
+      .year19 {
+        padding-top: 1.5rem;
+      }
+      .year20 {
+        padding-top: 6rem;
+      }
+
+      .line {
+        position: absolute;
+        height: 150%;
+        left: 70%;
+        width: clamp(5%, 50vw, 5vw);
+        background: $primary;
+        z-index: -1;
+      }
+    }
+    .right {
+      max-width: 70%;
+      display: flex;
+      justify-self: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+      height: 100vh;
+      width: 70%;
+      top: 2rem;
+
+      .top {
+        padding-top: 16rem;
+      }
+      p {
+        font-family: "Caviar Dreams";
+        color: $black;
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+      .ongoing {
+        font-family: "Caviar Dreams Bold";
+        color: $primary;
+        font-size: 0.7rem;
+        padding: 0.1rem;
+      }
+      .distance {
+        padding-bottom: 3rem;
+      }
+    }
+  }
+}

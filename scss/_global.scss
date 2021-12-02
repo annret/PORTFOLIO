@@ -1,0 +1,45 @@
+// global styling
+
+* {
+  margin: 0 !important;
+}
+
+html {
+  font-size: 60px;
+}
+@media (max-width: 1000px) {
+  html {
+    font-size: 40px;
+  }
+}
+@media (max-width: 700px) {
+  html {
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  //overflow: hidden;
+}
+/*
+.container {
+  width: 1000%;
+  height: 100%;
+  display: flex;
+  flex-wrap: no-wrap;
+}
+.panel {
+  will-change: transform;
+}
+*/
