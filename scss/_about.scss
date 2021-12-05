@@ -3,11 +3,12 @@
 #about-mobile {
   display: none;
 }
+.mobile {
+  display: none;
+}
 
 #about {
-  height: 100vh;
-  width: 100%;
-  display: flex;
+  padding-bottom: 1.5rem;
 
   .left {
     display: flex;
@@ -16,83 +17,80 @@
     flex-direction: column;
     width: 50%;
 
-    .title {
-      font-family: "Caviar Dreams Bold";
-      color: $black;
-      font-size: 1rem;
+    .about-me-h1 {
+      padding-left: 1rem;
+      font-size: 8vw;
     }
     p {
-      font-family: "Caviar Dreams";
-      color: $black;
-      font-size: 0.45rem;
-      text-align: justify;
-      padding: 2rem;
+      padding-left: 2rem;
+      padding-right: 1rem;
     }
   }
-
   .right {
-    padding-top: 1.8rem;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     position: relative;
     width: 50%;
-
+    padding-bottom: 1.5rem;
     .box {
       &-primary {
+        height: 65%;
         position: absolute;
-        height: 65vh;
         bottom: 0;
         right: 0;
-        width: clamp(90%, 50vw, 40vw);
+        width: 95%;
         background: $primary;
-        box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-        border-bottom-left-radius: 0.1rem;
+        box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         z-index: -2;
       }
     }
-
+    .about-me-img {
+      width: 60%;
+    }
     img {
-      width: 65%;
+      width: 100%;
+      max-width: 600px; //MEDIA QUERIES
       aspect-ratio: 1/1;
-      z-index: -1;
-      box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-      border-radius: 0.1rem;
+      box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+      border-radius: 10px;
     }
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 650px) {
   #about {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-
-    .right {
-      max-width: 50%;
-      padding-top: 1rem;
+    .box-primary {
+      width: 50% !important;
+      left: 0 !important;
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    .title {
+      display: none;
+    }
+    .mobile {
       display: flex;
+    }
+    .left {
+      order: 2;
+      p {
+        padding: 1rem;
+      }
+    }
+    .right {
+      align-items: center;
       justify-content: center;
-      align-items: flex-start;
-      position: relative;
-      width: 50%;
-
-      .box {
-        &-primary {
-          position: absolute;
-          height: 80vh;
-          width: clamp(100%, 50vw, 50vw);
-        }
-      }
-
-      img {
-        padding-top: 5vh;
-        box-shadow: none;
-      }
+      order: 1;
     }
   }
 }
 
+/*
 //mobile
 @media (max-width: 480px) {
   #about {
@@ -100,7 +98,6 @@
   }
 
   #about-mobile {
-    height: 100vh;
     width: 100%;
     display: flex;
 
@@ -119,8 +116,8 @@
           height: 35vh;
           width: clamp(100%, 50vw, 50vw);
           background: $primary;
-          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-          border-bottom-right-radius: 0.1rem;
+          box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+          border-bottom-right-radius: 10px;
           z-index: -2;
         }
       }
@@ -142,8 +139,8 @@
       aspect-ratio: 1/1;
       height: 27%;
       z-index: -1;
-      box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-      border-radius: 0.1rem;
+      box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+      border-radius: 10px;
     }
     p {
       position: absolute;
@@ -172,3 +169,4 @@
     }
   }
 }
+*/

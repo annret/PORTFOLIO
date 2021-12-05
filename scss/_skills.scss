@@ -5,50 +5,78 @@
   display: none;
 }
 
-#skills {
-  width: 100%;
-  display: flex;
+#programming-skills {
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 3rem;
 
+  .box {
+    &-primary {
+      height: 100%;
+      width: 10%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: $primary;
+      box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      z-index: -2;
+    }
+  }
+  .title-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    h1 {
+      padding: 0 0;
+      font-family: "Caviar Dreams Bold";
+      font-size: 11vw;
+      padding-left: 1rem;
+      opacity: 0.4;
+      color: $primary;
+      margin-inline-start: 0;
+    }
+  }
   .left {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-    width: 70%;
-
-    .box {
-      &-primary {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 40vh;
-        width: clamp(20%, 50vw, 12vw);
-        background: $primary;
-        box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-        border-top-right-radius: 0.1rem;
-        border-bottom-right-radius: 0.1rem;
-        z-index: -2;
+    width: 32%;
+    .title-2 {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      h1 {
+        font-family: "Caviar Dreams Bold";
+        font-size: 11vw;
+        padding: 0 0;
+        padding-left: 1rem;
+        opacity: 0.4;
+        color: $primary;
+        margin-inline-start: 0;
       }
     }
+  }
 
-    .title {
+  .right {
+    display: flex;
+    width: 68%;
+    padding-top: 1rem;
+
+    li {
       font-family: "Caviar Dreams Bold";
-      padding-top: 10vh;
       color: $black;
-      font-size: 1rem;
-      padding-left: 2rem;
-      z-index: 10;
+      list-style: none;
+      line-height: 1rem;
+      font-size: 0.6rem;
     }
 
-    .left-elements {
+    .right-left {
       display: flex;
-      justify-content: center;
+      align-items: center;
       position: relative;
-      width: 100%;
-      padding-top: 2rem;
-      padding-left: 1rem;
+      padding-left: 2rem;
 
       .line {
         position: absolute;
@@ -58,230 +86,178 @@
         border-radius: 5px;
         z-index: -1;
       }
+    }
+    .right-right {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 2rem;
+      .line {
+        position: absolute;
+        height: 100%;
+        width: 0.5vw;
+        background: $black;
+        border-radius: 5px;
+        z-index: -1;
+      }
+    }
+  }
+}
 
+#creative-skills {
+  flex-wrap: wrap;
+  position: relative;
+  .box {
+    &-primary {
+      height: 100%;
+      width: 10%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $primary;
+      box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      z-index: -2;
+    }
+  }
+
+  .title-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    h1 {
+      padding: 0 0;
+      font-family: "Caviar Dreams Bold";
+      font-size: 11vw;
+      padding-right: 1rem;
+      opacity: 0.4;
+      color: $primary;
+      margin-inline-start: 0;
+    }
+  }
+
+  .left {
+    display: flex;
+    justify-content: flex-end;
+    width: 68%;
+
+    ul {
+      text-align: right;
+      padding-right: 40px;
       li {
         font-family: "Caviar Dreams Bold";
         color: $black;
         list-style: none;
         line-height: 1rem;
         font-size: 0.6rem;
-        z-index: 10;
-      }
-      .left-left {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        width: 40%;
-        padding-left: 25%;
-      }
-      .left-right {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        position: relative;
-        width: 40%;
       }
     }
-  }
-  .creativetop {
-    padding-top: 2.5rem;
+    .left-right {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding-left: 1rem;
+      .line {
+        position: absolute;
+        height: 100%;
+        width: 0.5vw;
+        right: 0;
+        background: $black;
+        border-radius: 5px;
+        z-index: -1;
+      }
+    }
+    .left-left {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      padding-left: 2rem;
+      .line {
+        position: absolute;
+        height: 100%;
+        width: 0.5vw;
+        right: 0;
+        background: $black;
+        border-radius: 5px;
+        z-index: -1;
+      }
+    }
   }
 
   .right {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
-    width: 30%;
-
-    svg {
-      padding-top: 0.5rem;
-      padding-right: 0.5rem;
-      opacity: 0.4;
-      z-index: -2;
+    width: 32%;
+    .title-2 {
+      padding: 0 0;
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      h1 {
+        font-family: "Caviar Dreams Bold";
+        font-size: 11vw;
+        padding: 0 0;
+        padding-right: 1rem;
+        opacity: 0.4;
+        color: $primary;
+        margin-inline-start: 0;
+      }
     }
   }
 }
 
-@media (max-width: 1520px) {
-  #skills {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-
+@media (max-width: 650px) {
+  .title-1 {
+    padding-top: 1rem;
+  }
+  ul {
+    padding: 20px;
+  }
+  #programming-skills {
     .left {
-      padding-right: 3rem;
-
-      .box {
-        &-primary {
-          height: 100vh;
-          width: clamp(10%, 50vw, 5vw);
+      .title-2 {
+        h1 {
+          padding-left: 0;
         }
       }
+    }
+    .right {
+      justify-content: flex-start;
+      align-items: center;
 
-      .left-elements {
-        padding-top: 1rem;
-        .left-left {
-          ul {
-            padding-left: 0rem;
-          }
-        }
+      .right-left {
+        padding-left: 0;
       }
-
+      .right-right {
+        padding-left: 0;
+      }
+    }
+  }
+  #creative-skills {
+    .left {
+      justify-content: flex-end;
+      padding: 1rem;
+      order: 2;
+      ul {
+        padding: 20px;
+      }
+      .left-left {
+        padding-right: 0;
+        padding-left: 0;
+      }
       .left-right {
-        ul {
-          padding-left: 1rem;
-        }
+        padding-right: 0;
       }
     }
-  }
-}
-
-//mobile
-@media (max-width: 480px) {
-  #skills {
-    display: none;
-  }
-
-  //programming skills
-  #skills-mobile-programming {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-
-    .left {
-      max-width: 50%;
-      display: flex;
-      justify-self: flex-start;
-      align-items: flex-start;
-      position: relative;
-      height: 100vh;
-      width: 50%;
-      padding-top: 17rem;
-
-      .box {
-        &-top-left {
-          position: absolute;
-          height: 35vh;
-          width: clamp(100%, 50vw, 50vw);
-          background: $primary;
-          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-          border-bottom-right-radius: 0.1rem;
-          z-index: -2;
-        }
-      }
-    }
-
-    .title {
-      position: absolute;
-      top: 725%;
-      left: 20%;
-      font-family: "Caviar Dreams Bold";
-      color: $black;
-      font-size: 2rem;
-      z-index: 10;
-    }
-    ul {
-      position: absolute;
-      top: 752%;
-      right: 6%;
-      left: 23%;
-      line-height: 1.5rem;
-      font-family: "Caviar Dreams";
-      color: $black;
-      font-size: 1rem;
-      text-align: justify;
-      padding: 0.5rem;
-    }
-
     .right {
-      svg {
-        position: absolute;
-        top: 310rem;
-        right: 0rem;
-        font-family: "Caviar Dreams Bold";
-        color: $primary;
-        font-size: 16rem;
-        bottom: -5rem;
-        opacity: 0.2;
-        z-index: -2;
-      }
-    }
-  }
-
-  //creative skills
-  #skills-mobile-creative {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-
-    .left {
-      display: flex;
-      justify-self: flex-start;
-      align-items: flex-start;
-      position: relative;
-      height: 100vh;
-      width: 50%;
-      padding-top: 17rem;
-
-      .box {
-        &-top-left {
-          position: absolute;
-          height: 35vh;
-          width: clamp(100%, 50vw, 50vw);
-          background: $primary;
-          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-          border-bottom-right-radius: 0.1rem;
-          z-index: -2;
+      .title-2 {
+        h1 {
+          padding-right: 0;
         }
       }
-    }
-
-    .title {
-      position: absolute;
-      top: 828%;
-      left: 17%;
-      font-family: "Caviar Dreams Bold";
-      color: $black;
-      font-size: 2rem;
-      z-index: 10;
-    }
-    ul {
-      position: absolute;
-      top: 851%;
-      right: 6%;
-      left: 23%;
-      line-height: 1.5rem;
-      font-family: "Caviar Dreams";
-      color: $black;
-      font-size: 1rem;
-      text-align: justify;
-      padding: 0.5rem;
-    }
-
-    .right {
-      display: flex;
-      justify-self: flex-start;
-      align-items: flex-start;
-      position: relative;
-      height: 100vh;
-      width: 50%;
-      padding-top: 17rem;
-
-      svg {
-        position: absolute;
-        top: 346rem;
-        right: 0rem;
-        font-family: "Caviar Dreams Bold";
-        color: $primary;
-        font-size: 16rem;
-        bottom: -5rem;
-        opacity: 0.2;
-        z-index: -2;
-      }
+      order: 1;
     }
   }
 }

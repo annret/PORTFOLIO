@@ -5,10 +5,6 @@
 }
 
 #hero {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-
   .left {
     max-width: 50%;
     display: flex;
@@ -24,8 +20,8 @@
         height: 80vh;
         width: clamp(100%, 50vw, 50vw);
         background: $primary;
-        box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-        border-bottom-right-radius: 0.1rem;
+        border-bottom-right-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
         z-index: -2;
       }
     }
@@ -33,8 +29,8 @@
       font-family: "Caviar Dreams Bold";
       padding-top: 40vh;
       color: $black;
-      font-size: 1rem;
-      padding-right: 5px;
+      font-size: 1.5rem;
+      padding-right: 10px;
       z-index: 10;
     }
   }
@@ -44,12 +40,12 @@
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    padding-left: 15px;
+    padding-left: 10px;
 
     .lastname {
       font-family: "Caviar Dreams Bold";
       color: $primary;
-      font-size: 1rem;
+      font-size: 1.5rem;
       padding-top: 40vh;
       padding-right: 1rem;
       z-index: 10;
@@ -57,15 +53,14 @@
     .subtitle {
       font-family: "Caviar Dreams";
       color: $black;
-      font-size: 0.5rem;
+      font-size: 0.8rem;
       margin-top: 0%;
       z-index: 10;
     }
   }
 }
 
-//mobile
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   #hero {
     display: none;
   }
@@ -74,55 +69,59 @@
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 
+    .left,
+    .right {
+      padding-left: 0;
+      padding-right: 0;
+    }
     .left {
-      max-width: 50%;
       display: flex;
       justify-self: flex-start;
       align-items: flex-start;
       position: relative;
-      height: 100vh;
-      width: 50%;
+      height: 33%;
 
       .box {
         &-top-left {
-          position: absolute;
-          height: 35vh;
-          width: clamp(100%, 50vw, 50vw);
+          height: 100%;
+          width: 50%;
           background: $primary;
-          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-          border-bottom-right-radius: 0.1rem;
+          box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+          border-bottom-right-radius: 10px;
           z-index: -2;
         }
       }
     }
 
-    .firstname {
-      position: absolute;
-      top: 42%;
-      left: 38%;
-      font-family: "Caviar Dreams Bold";
-      color: $black;
-      font-size: 2rem;
-      z-index: 10;
-    }
-    .lastname {
-      position: absolute;
-      top: 47%;
-      left: 17%;
-      font-family: "Caviar Dreams Bold";
-      color: $primary;
-      font-size: 2rem;
-      z-index: 10;
-    }
-    .subtitle {
-      position: absolute;
-      top: 54%;
-      left: 33%;
-      font-family: "Caviar Dreams";
-      color: $black;
-      font-size: 1rem;
-      z-index: 10;
+    .middle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      flex-direction: column;
+      width: 100%;
+      height: 33%;
+
+      .firstname {
+        font-family: "Caviar Dreams Bold";
+        color: $black;
+        font-size: 13vw;
+        z-index: 10;
+      }
+      .lastname {
+        font-family: "Caviar Dreams Bold";
+        color: $primary;
+        font-size: 13vw;
+        z-index: 10;
+      }
+      .subtitle {
+        font-family: "Caviar Dreams";
+        color: $black;
+        font-size: 7vw;
+        z-index: 10;
+      }
     }
 
     .right {
@@ -130,17 +129,15 @@
       justify-content: flex-end;
       align-items: flex-end;
       position: relative;
-      height: 100vh;
-      width: 50%;
-
+      height: 33%;
       .box {
         &-bottom-right {
-          position: absolute;
-          height: 35vh;
-          width: clamp(100%, 50vw, 50vw);
+          height: 100%;
+          width: 50%;
           background: $primary;
-          box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-          border-bottom-right-radius: 0.1rem;
+          box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
           z-index: -2;
         }
       }

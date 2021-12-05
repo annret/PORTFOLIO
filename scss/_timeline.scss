@@ -12,7 +12,6 @@
   position: relative;
   height: 200vh;
   width: 100%;
-  padding-top: 1rem;
   flex-wrap: wrap;
 
   .backgroundcontainer {
@@ -65,12 +64,10 @@
         z-index: 10;
       }
       p {
-        font-family: "Caviar Dreams";
-        color: $black;
-        font-size: 0.45rem;
         padding: 0.2rem;
         padding-left: 0.8rem;
         padding-right: 0.8rem;
+        text-align: left;
         z-index: 10;
       }
 

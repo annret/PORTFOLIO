@@ -19,9 +19,14 @@
 }
 
 html {
-  font-size: 60px;
+  font-size: 80px;
 }
 
+@media (max-width: 1250px) {
+  html {
+    font-size: 60px;
+  }
+}
 @media (max-width: 1000px) {
   html {
     font-size: 40px;
@@ -32,40 +37,58 @@ html {
     font-size: 30px;
   }
 }
-@media (max-width: 500px) {
-  html {
-    font-size: 20px;
+@media (max-width: 650px) {
+  .container {
+    flex-flow: wrap;
+  }
+
+  .left {
+    width: 100% !important;
+  }
+
+  .right {
+    width: 100% !important;
   }
 }
+body {
+  hyphens: auto;
+}
+
+p {
+  font-family: "Caviar Dreams";
+  color: #000;
+  font-size: 0.45rem;
+  text-align: justify;
+  line-height: 0.65rem;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title h1 {
+  font-family: "Caviar Dreams Bold";
+  padding: 1.25rem 0;
+  margin-inline-start: 0;
+  color: #ebb7b3;
+}
+
 a {
   color: #000;
   text-decoration: none;
 }
 
-body {
-  height: 100vh;
-}
-
-/*
-.container {
-  width: 1000%;
-  height: 100%;
-  display: flex;
-  flex-wrap: no-wrap;
-}
-.panel {
-  will-change: transform;
-}
-*/
 #hero-mobile {
   display: none;
 }
 
-#hero {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-}
 #hero .left {
   max-width: 50%;
   display: flex;
@@ -80,16 +103,16 @@ body {
   height: 80vh;
   width: clamp(100%, 50vw, 50vw);
   background: #ebb7b3;
-  box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-  border-bottom-right-radius: 0.1rem;
+  border-bottom-right-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
   z-index: -2;
 }
 #hero .left .firstname {
   font-family: "Caviar Dreams Bold";
   padding-top: 40vh;
   color: #000;
-  font-size: 1rem;
-  padding-right: 5px;
+  font-size: 1.5rem;
+  padding-right: 10px;
   z-index: 10;
 }
 #hero .right {
@@ -97,12 +120,12 @@ body {
   display: flex;
   flex-direction: column;
   align-content: flex-start;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 #hero .right .lastname {
   font-family: "Caviar Dreams Bold";
   color: #ebb7b3;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding-top: 40vh;
   padding-right: 1rem;
   z-index: 10;
@@ -110,12 +133,12 @@ body {
 #hero .right .subtitle {
   font-family: "Caviar Dreams";
   color: #000;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   margin-top: 0%;
   z-index: 10;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   #hero {
     display: none;
   }
@@ -124,50 +147,53 @@ body {
     height: 100vh;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+  }
+  #hero-mobile .left,
+#hero-mobile .right {
+    padding-left: 0;
+    padding-right: 0;
   }
   #hero-mobile .left {
-    max-width: 50%;
     display: flex;
     justify-self: flex-start;
     align-items: flex-start;
     position: relative;
-    height: 100vh;
-    width: 50%;
+    height: 33%;
   }
   #hero-mobile .left .box-top-left {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
+    height: 100%;
+    width: 50%;
     background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    border-bottom-right-radius: 10px;
     z-index: -2;
   }
-  #hero-mobile .firstname {
-    position: absolute;
-    top: 42%;
-    left: 38%;
+  #hero-mobile .middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    height: 33%;
+  }
+  #hero-mobile .middle .firstname {
     font-family: "Caviar Dreams Bold";
     color: #000;
-    font-size: 2rem;
+    font-size: 13vw;
     z-index: 10;
   }
-  #hero-mobile .lastname {
-    position: absolute;
-    top: 47%;
-    left: 17%;
+  #hero-mobile .middle .lastname {
     font-family: "Caviar Dreams Bold";
     color: #ebb7b3;
-    font-size: 2rem;
+    font-size: 13vw;
     z-index: 10;
   }
-  #hero-mobile .subtitle {
-    position: absolute;
-    top: 54%;
-    left: 33%;
+  #hero-mobile .middle .subtitle {
     font-family: "Caviar Dreams";
     color: #000;
-    font-size: 1rem;
+    font-size: 7vw;
     z-index: 10;
   }
   #hero-mobile .right {
@@ -175,16 +201,15 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     position: relative;
-    height: 100vh;
-    width: 50%;
+    height: 33%;
   }
   #hero-mobile .right .box-bottom-right {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
+    height: 100%;
+    width: 50%;
     background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     z-index: -2;
   }
 }
@@ -192,10 +217,12 @@ body {
   display: none;
 }
 
+.mobile {
+  display: none;
+}
+
 #about {
-  height: 100vh;
-  width: 100%;
-  display: flex;
+  padding-bottom: 1.5rem;
 }
 #about .left {
   display: flex;
@@ -204,467 +231,251 @@ body {
   flex-direction: column;
   width: 50%;
 }
-#about .left .title {
-  font-family: "Caviar Dreams Bold";
-  color: #000;
-  font-size: 1rem;
+#about .left .about-me-h1 {
+  padding-left: 1rem;
+  font-size: 8vw;
 }
 #about .left p {
-  font-family: "Caviar Dreams";
-  color: #000;
-  font-size: 0.45rem;
-  text-align: justify;
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 1rem;
 }
 #about .right {
-  padding-top: 1.8rem;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   position: relative;
   width: 50%;
+  padding-bottom: 1.5rem;
 }
 #about .right .box-primary {
+  height: 65%;
   position: absolute;
-  height: 65vh;
   bottom: 0;
   right: 0;
-  width: clamp(90%, 50vw, 40vw);
+  width: 95%;
   background: #ebb7b3;
-  box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-  border-bottom-left-radius: 0.1rem;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   z-index: -2;
 }
+#about .right .about-me-img {
+  width: 60%;
+}
 #about .right img {
-  width: 65%;
+  width: 100%;
+  max-width: 600px;
   aspect-ratio: 1/1;
-  z-index: -1;
-  box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-  border-radius: 0.1rem;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  border-radius: 10px;
 }
 
-@media (max-width: 1300px) {
-  #about {
-    height: 100vh;
-    width: 100%;
+@media (max-width: 650px) {
+  #about .box-primary {
+    width: 50% !important;
+    left: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #about .title {
+    display: none;
+  }
+  #about .mobile {
     display: flex;
+  }
+  #about .left {
+    order: 2;
+  }
+  #about .left p {
+    padding: 1rem;
   }
   #about .right {
-    max-width: 50%;
-    padding-top: 1rem;
-    display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    width: 50%;
-  }
-  #about .right .box-primary {
-    position: absolute;
-    height: 80vh;
-    width: clamp(100%, 50vw, 50vw);
-  }
-  #about .right img {
-    padding-top: 5vh;
-    box-shadow: none;
+    order: 1;
   }
 }
+/*
+//mobile
 @media (max-width: 480px) {
   #about {
     display: none;
   }
 
   #about-mobile {
-    height: 100vh;
     width: 100%;
     display: flex;
-  }
-  #about-mobile .left {
-    max-width: 50%;
-    display: flex;
-    justify-self: flex-start;
-    align-items: flex-start;
-    position: relative;
-    height: 100vh;
-    width: 50%;
-  }
-  #about-mobile .left .box-top-left {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
-    background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
-    z-index: -2;
-  }
-  #about-mobile .title {
-    position: absolute;
-    top: 115%;
-    left: 28%;
-    font-family: "Caviar Dreams Bold";
-    color: #000;
-    font-size: 2rem;
-    z-index: 10;
-  }
-  #about-mobile img {
-    position: absolute;
-    top: 125%;
-    left: 23%;
-    aspect-ratio: 1/1;
-    height: 27%;
-    z-index: -1;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-radius: 0.1rem;
-  }
-  #about-mobile p {
-    position: absolute;
-    top: 155%;
-    right: 6%;
-    left: 9%;
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 0.8rem;
-    text-align: justify;
-    padding: 0.5rem;
-  }
-  #about-mobile .right p {
-    position: absolute;
-    top: 62rem;
-    left: 6rem;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 16rem;
-    bottom: -5rem;
-    opacity: 0.2;
-    z-index: -2;
+
+    .left {
+      max-width: 50%;
+      display: flex;
+      justify-self: flex-start;
+      align-items: flex-start;
+      position: relative;
+      height: 100vh;
+      width: 50%;
+
+      .box {
+        &-top-left {
+          position: absolute;
+          height: 35vh;
+          width: clamp(100%, 50vw, 50vw);
+          background: $primary;
+          box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+          border-bottom-right-radius: 10px;
+          z-index: -2;
+        }
+      }
+    }
+
+    .title {
+      position: absolute;
+      top: 115%;
+      left: 28%;
+      font-family: "Caviar Dreams Bold";
+      color: $black;
+      font-size: 2rem;
+      z-index: 10;
+    }
+    img {
+      position: absolute;
+      top: 125%;
+      left: 23%;
+      aspect-ratio: 1/1;
+      height: 27%;
+      z-index: -1;
+      box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+      border-radius: 10px;
+    }
+    p {
+      position: absolute;
+      top: 155%;
+      right: 6%;
+      left: 9%;
+      font-family: "Caviar Dreams";
+      color: $black;
+      font-size: 0.8rem;
+      text-align: justify;
+      padding: 0.5rem;
+    }
+
+    .right {
+      p {
+        position: absolute;
+        top: 62rem;
+        left: 6rem;
+        font-family: "Caviar Dreams Bold";
+        color: $primary;
+        font-size: 16rem;
+        bottom: -5rem;
+        opacity: 0.2;
+        z-index: -2;
+      }
+    }
   }
 }
+*/
 #projects-mobile-details,
 #projects-mobile-photography,
 #projects-mobile-mtm {
   display: none;
 }
 
+.padding-bottom-projects {
+  padding-bottom: 2rem;
+}
+
 #projects {
   width: 100%;
   display: flex;
-  padding-bottom: 1rem;
 }
 #projects .left {
-  min-width: 50%;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
   flex-direction: column;
   width: 50%;
 }
-#projects .left .projectNR {
+#projects .left .project-title {
+  position: relative;
+  height: 7rem;
+  display: flex;
+  align-items: center;
+}
+#projects .left .project-title .projectNR {
+  position: absolute;
+  top: 50%;
+  transform: translate(-26%, -50%);
   font-family: "Caviar Dreams Bold";
   color: #ebb7b3;
-  font-size: 5rem;
-  padding-right: 10rem;
-  opacity: 0.6;
-  z-index: -2;
+  font-size: 6.5rem;
+  opacity: 0.8;
 }
-#projects .left .title {
+#projects .left .project-title .title {
   font-family: "Caviar Dreams Bold";
   color: #000;
-  font-size: 1rem;
+  font-size: 1.5rem;
   z-index: 10;
 }
-#projects .left .subtitle {
-  font-family: "Caviar Dreams Bold";
-  color: #ebb7b3;
-  font-size: 0.35rem;
-  padding: 0.1rem;
+#projects .left .link-underline {
+  text-decoration: underline #ebb7b3 0.1rem;
+  text-decoration-skip-ink: none;
 }
 #projects .left p {
-  font-family: "Caviar Dreams";
-  color: #000;
-  font-size: 0.45rem;
-  text-align: justify;
   padding-left: 1rem;
   padding-right: 1rem;
   z-index: 1;
 }
+#projects .left .tags {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-family: "Caviar Dreams Bold";
+  color: #ebb7b3;
+  font-size: 0.5rem;
+  padding: 0.1rem;
+  padding-left: 1rem;
+}
 #projects .right {
-  max-width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   position: relative;
-  padding-top: 0.5rem;
-  padding-right: 1rem;
   width: 50%;
 }
 #projects .right img {
-  width: 45vw;
-  z-index: -1;
+  width: 100%;
 }
 #projects .right .img-MTM {
-  width: 25vw;
-  z-index: -1;
-}
-#projects .right .projectLinkIcon {
-  position: absolute;
-  bottom: 0;
-  right: 0.3rem;
-}
-#projects .right .projectLinkIcon a {
-  color: #fff;
-}
-#projects .right .projectLinkIcon a svg {
-  color: #000;
+  width: auto;
+  max-width: 100%;
+  aspect-ratio: 255/482;
+  height: 100vh;
+  max-height: 100%;
 }
 
-@media (max-width: 480px) {
-  #projects {
-    display: none;
+@media (max-width: 650px) {
+  .right,
+.left {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  #projects-mobile-details {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-  }
-  #projects-mobile-details .left {
-    max-width: 50%;
-    display: flex;
-    justify-self: flex-start;
-    align-items: flex-start;
-    position: relative;
-    height: 100vh;
-    width: 50%;
-  }
-  #projects-mobile-details .left .box-top-left {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
-    background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
-    z-index: -2;
-  }
-  #projects-mobile-details .title {
-    position: absolute;
-    top: 212%;
-    left: 30%;
-    font-family: "Caviar Dreams Bold";
-    color: #000;
-    font-size: 2rem;
-    z-index: 10;
-  }
-  #projects-mobile-details .projectLinkIcon {
-    position: absolute;
-    top: 212.5%;
-    left: 66%;
-    padding-top: 0;
-  }
-  #projects-mobile-details img {
-    position: absolute;
-    top: 224%;
-    left: 23%;
-    width: 60%;
-    height: 20%;
-    z-index: -1;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-radius: 0.1rem;
-  }
-  #projects-mobile-details .subtitle {
-    position: absolute;
-    top: 248%;
-    left: 37%;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 1rem;
-    padding: 0.1rem;
-  }
-  #projects-mobile-details p {
-    position: absolute;
-    top: 252%;
-    right: 6%;
-    left: 9%;
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 0.8rem;
-    text-align: justify;
-    padding: 0.5rem;
-  }
-  #projects-mobile-details .right p {
-    position: absolute;
-    top: 103rem;
-    left: -1rem;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 16rem;
-    opacity: 0.2;
-    z-index: -2;
+  .mtm-title {
+    padding: 0;
   }
 
-  #projects-mobile-photography {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-  }
-  #projects-mobile-photography .left {
-    max-width: 50%;
-    display: flex;
-    justify-self: flex-start;
-    align-items: flex-start;
-    position: relative;
-    height: 100vh;
-    width: 50%;
-  }
-  #projects-mobile-photography .left .box-top-left {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
-    background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
-    z-index: -2;
-  }
-  #projects-mobile-photography .title {
-    position: absolute;
-    top: 312%;
-    left: 13%;
-    font-family: "Caviar Dreams Bold";
-    color: #000;
-    font-size: 2rem;
-    z-index: 10;
-  }
-  #projects-mobile-photography .projectLinkIcon {
-    position: absolute;
-    top: 312.5%;
-    left: 80%;
-    padding-top: 0;
-  }
-  #projects-mobile-photography img {
-    position: absolute;
-    top: 324%;
-    left: 23%;
-    width: 60%;
-    height: 20%;
-    z-index: -1;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-radius: 0.1rem;
-  }
-  #projects-mobile-photography .subtitle {
-    position: absolute;
-    top: 348%;
-    left: 27%;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 1rem;
-    padding: 0.1rem;
-  }
-  #projects-mobile-photography p {
-    position: absolute;
-    top: 352%;
-    right: 6%;
-    left: 9%;
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 0.8rem;
-    text-align: justify;
-    padding: 0.5rem;
-  }
-  #projects-mobile-photography .right p {
-    position: absolute;
-    top: 144rem;
-    left: -1rem;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 16rem;
-    opacity: 0.2;
-    z-index: -2;
+  .mtm-p {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
   }
 
-  #projects-mobile-mtm {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-  }
-  #projects-mobile-mtm .left {
-    max-width: 50%;
-    display: flex;
-    justify-self: flex-start;
-    align-items: flex-start;
-    position: relative;
-    height: 100vh;
-    width: 50%;
-  }
-  #projects-mobile-mtm .left .box-top-left {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
-    background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
-    z-index: -2;
-  }
-  #projects-mobile-mtm .title {
-    position: absolute;
-    top: 410%;
-    left: 26%;
-    font-family: "Caviar Dreams Bold";
-    color: #000;
-    font-size: 2rem;
-    z-index: 10;
-  }
-  #projects-mobile-mtm .projectLinkIcon {
-    position: absolute;
-    top: 416.5%;
-    left: 55%;
-    padding-top: 0;
-  }
-  #projects-mobile-mtm .projectLinkIcon a {
-    color: #fff;
-  }
-  #projects-mobile-mtm .projectLinkIcon a svg {
-    color: #000;
-  }
-  #projects-mobile-mtm img {
-    position: absolute;
-    top: 427%;
-    left: 23%;
-    aspect-ratio: 1/1;
-    width: 60%;
-    height: 20%;
-    z-index: -1;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-radius: 0.1rem;
-  }
-  #projects-mobile-mtm .subtitle {
-    position: absolute;
-    top: 451%;
-    left: 15%;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 1rem;
-    padding: 0.1rem;
-  }
-  #projects-mobile-mtm p {
-    position: absolute;
-    top: 456%;
-    right: 6%;
-    left: 9%;
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 0.8rem;
-    text-align: justify;
-    padding: 0.5rem;
-  }
-  #projects-mobile-mtm .right p {
-    position: absolute;
-    top: 186rem;
-    left: -1rem;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 16rem;
-    bottom: -5rem;
-    opacity: 0.2;
-    z-index: -2;
+  #projects .right .img-MTM {
+    width: 220px;
+    aspect-ratio: 255/482;
+    height: auto;
+    padding-bottom: 2rem;
   }
 }
 #timeline1-mobile,
@@ -679,7 +490,6 @@ body {
   position: relative;
   height: 200vh;
   width: 100%;
-  padding-top: 1rem;
   flex-wrap: wrap;
 }
 #timeline .backgroundcontainer {
@@ -730,12 +540,10 @@ body {
   z-index: 10;
 }
 #timeline .flexcontainer .flex p {
-  font-family: "Caviar Dreams";
-  color: #000;
-  font-size: 0.45rem;
   padding: 0.2rem;
   padding-left: 0.8rem;
   padding-right: 0.8rem;
+  text-align: left;
   z-index: 10;
 }
 #timeline .flexcontainer .flex .ongoing {
@@ -913,48 +721,76 @@ body {
   display: none;
 }
 
-#skills {
-  width: 100%;
-  display: flex;
-}
-#skills .left {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
+#programming-skills {
+  flex-wrap: wrap;
   position: relative;
-  height: 100vh;
-  width: 70%;
+  padding-bottom: 3rem;
 }
-#skills .left .box-primary {
+#programming-skills .box-primary {
+  height: 100%;
+  width: 10%;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 40vh;
-  width: clamp(20%, 50vw, 12vw);
+  bottom: 0;
+  right: 0;
   background: #ebb7b3;
-  box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-  border-top-right-radius: 0.1rem;
-  border-bottom-right-radius: 0.1rem;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   z-index: -2;
 }
-#skills .left .title {
-  font-family: "Caviar Dreams Bold";
-  padding-top: 10vh;
-  color: #000;
-  font-size: 1rem;
-  padding-left: 2rem;
-  z-index: 10;
-}
-#skills .left .left-elements {
-  display: flex;
-  justify-content: center;
-  position: relative;
+#programming-skills .title-1 {
   width: 100%;
-  padding-top: 2rem;
-  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
-#skills .left .left-elements .line {
+#programming-skills .title-1 h1 {
+  padding: 0 0;
+  font-family: "Caviar Dreams Bold";
+  font-size: 11vw;
+  padding-left: 1rem;
+  opacity: 0.4;
+  color: #ebb7b3;
+  margin-inline-start: 0;
+}
+#programming-skills .left {
+  display: flex;
+  width: 32%;
+}
+#programming-skills .left .title-2 {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#programming-skills .left .title-2 h1 {
+  font-family: "Caviar Dreams Bold";
+  font-size: 11vw;
+  padding: 0 0;
+  padding-left: 1rem;
+  opacity: 0.4;
+  color: #ebb7b3;
+  margin-inline-start: 0;
+}
+#programming-skills .right {
+  display: flex;
+  width: 68%;
+  padding-top: 1rem;
+}
+#programming-skills .right li {
+  font-family: "Caviar Dreams Bold";
+  color: #000;
+  list-style: none;
+  line-height: 1rem;
+  font-size: 0.6rem;
+}
+#programming-skills .right .right-left {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 2rem;
+}
+#programming-skills .right .right-left .line {
   position: absolute;
   height: 100%;
   width: 0.5vw;
@@ -962,196 +798,162 @@ body {
   border-radius: 5px;
   z-index: -1;
 }
-#skills .left .left-elements li {
+#programming-skills .right .right-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 2rem;
+}
+#programming-skills .right .right-right .line {
+  position: absolute;
+  height: 100%;
+  width: 0.5vw;
+  background: #000;
+  border-radius: 5px;
+  z-index: -1;
+}
+
+#creative-skills {
+  flex-wrap: wrap;
+  position: relative;
+}
+#creative-skills .box-primary {
+  height: 100%;
+  width: 10%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #ebb7b3;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  z-index: -2;
+}
+#creative-skills .title-1 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#creative-skills .title-1 h1 {
+  padding: 0 0;
+  font-family: "Caviar Dreams Bold";
+  font-size: 11vw;
+  padding-right: 1rem;
+  opacity: 0.4;
+  color: #ebb7b3;
+  margin-inline-start: 0;
+}
+#creative-skills .left {
+  display: flex;
+  justify-content: flex-end;
+  width: 68%;
+}
+#creative-skills .left ul {
+  text-align: right;
+  padding-right: 40px;
+}
+#creative-skills .left ul li {
   font-family: "Caviar Dreams Bold";
   color: #000;
   list-style: none;
   line-height: 1rem;
   font-size: 0.6rem;
-  z-index: 10;
 }
-#skills .left .left-elements .left-left {
+#creative-skills .left .left-right {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
   position: relative;
-  width: 40%;
-  padding-left: 25%;
+  padding-left: 1rem;
 }
-#skills .left .left-elements .left-right {
+#creative-skills .left .left-right .line {
+  position: absolute;
+  height: 100%;
+  width: 0.5vw;
+  right: 0;
+  background: #000;
+  border-radius: 5px;
+  z-index: -1;
+}
+#creative-skills .left .left-left {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  width: 40%;
-}
-#skills .creativetop {
-  padding-top: 2.5rem;
-}
-#skills .right {
-  display: flex;
-  justify-content: flex-start;
   align-items: flex-end;
-  flex-direction: column;
   position: relative;
-  height: 100vh;
-  width: 30%;
+  padding-left: 2rem;
 }
-#skills .right svg {
-  padding-top: 0.5rem;
-  padding-right: 0.5rem;
+#creative-skills .left .left-left .line {
+  position: absolute;
+  height: 100%;
+  width: 0.5vw;
+  right: 0;
+  background: #000;
+  border-radius: 5px;
+  z-index: -1;
+}
+#creative-skills .right {
+  display: flex;
+  width: 32%;
+}
+#creative-skills .right .title-2 {
+  padding: 0 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+#creative-skills .right .title-2 h1 {
+  font-family: "Caviar Dreams Bold";
+  font-size: 11vw;
+  padding: 0 0;
+  padding-right: 1rem;
   opacity: 0.4;
-  z-index: -2;
+  color: #ebb7b3;
+  margin-inline-start: 0;
 }
 
-@media (max-width: 1520px) {
-  #skills {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-  }
-  #skills .left {
-    padding-right: 3rem;
-  }
-  #skills .left .box-primary {
-    height: 100vh;
-    width: clamp(10%, 50vw, 5vw);
-  }
-  #skills .left .left-elements {
+@media (max-width: 650px) {
+  .title-1 {
     padding-top: 1rem;
   }
-  #skills .left .left-elements .left-left ul {
-    padding-left: 0rem;
-  }
-  #skills .left .left-right ul {
-    padding-left: 1rem;
-  }
-}
-@media (max-width: 480px) {
-  #skills {
-    display: none;
+
+  ul {
+    padding: 20px;
   }
 
-  #skills-mobile-programming {
-    height: 100vh;
-    width: 100%;
-    display: flex;
+  #programming-skills .left .title-2 h1 {
+    padding-left: 0;
   }
-  #skills-mobile-programming .left {
-    max-width: 50%;
-    display: flex;
-    justify-self: flex-start;
-    align-items: flex-start;
-    position: relative;
-    height: 100vh;
-    width: 50%;
-    padding-top: 17rem;
+  #programming-skills .right {
+    justify-content: flex-start;
+    align-items: center;
   }
-  #skills-mobile-programming .left .box-top-left {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
-    background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
-    z-index: -2;
+  #programming-skills .right .right-left {
+    padding-left: 0;
   }
-  #skills-mobile-programming .title {
-    position: absolute;
-    top: 725%;
-    left: 20%;
-    font-family: "Caviar Dreams Bold";
-    color: #000;
-    font-size: 2rem;
-    z-index: 10;
-  }
-  #skills-mobile-programming ul {
-    position: absolute;
-    top: 752%;
-    right: 6%;
-    left: 23%;
-    line-height: 1.5rem;
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 1rem;
-    text-align: justify;
-    padding: 0.5rem;
-  }
-  #skills-mobile-programming .right svg {
-    position: absolute;
-    top: 310rem;
-    right: 0rem;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 16rem;
-    bottom: -5rem;
-    opacity: 0.2;
-    z-index: -2;
+  #programming-skills .right .right-right {
+    padding-left: 0;
   }
 
-  #skills-mobile-creative {
-    height: 100vh;
-    width: 100%;
-    display: flex;
+  #creative-skills .left {
+    justify-content: flex-end;
+    padding: 1rem;
+    order: 2;
   }
-  #skills-mobile-creative .left {
-    display: flex;
-    justify-self: flex-start;
-    align-items: flex-start;
-    position: relative;
-    height: 100vh;
-    width: 50%;
-    padding-top: 17rem;
+  #creative-skills .left ul {
+    padding: 20px;
   }
-  #skills-mobile-creative .left .box-top-left {
-    position: absolute;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
-    background: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
-    z-index: -2;
+  #creative-skills .left .left-left {
+    padding-right: 0;
+    padding-left: 0;
   }
-  #skills-mobile-creative .title {
-    position: absolute;
-    top: 828%;
-    left: 17%;
-    font-family: "Caviar Dreams Bold";
-    color: #000;
-    font-size: 2rem;
-    z-index: 10;
+  #creative-skills .left .left-right {
+    padding-right: 0;
   }
-  #skills-mobile-creative ul {
-    position: absolute;
-    top: 851%;
-    right: 6%;
-    left: 23%;
-    line-height: 1.5rem;
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 1rem;
-    text-align: justify;
-    padding: 0.5rem;
+  #creative-skills .right {
+    order: 1;
   }
-  #skills-mobile-creative .right {
-    display: flex;
-    justify-self: flex-start;
-    align-items: flex-start;
-    position: relative;
-    height: 100vh;
-    width: 50%;
-    padding-top: 17rem;
-  }
-  #skills-mobile-creative .right svg {
-    position: absolute;
-    top: 346rem;
-    right: 0rem;
-    font-family: "Caviar Dreams Bold";
-    color: #ebb7b3;
-    font-size: 16rem;
-    bottom: -5rem;
-    opacity: 0.2;
-    z-index: -2;
+  #creative-skills .right .title-2 h1 {
+    padding-right: 0;
   }
 }
 #contact-mobile,
@@ -1163,55 +965,76 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  height: 100vh;
   width: 100%;
   flex-wrap: wrap;
+  padding: 17vw 0;
 }
 #contact .backgroundcontainer {
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100%;
   z-index: -2;
 }
 #contact .backgroundcontainer .backgroundcontact {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   font-family: "Caviar Dreams Bold";
   color: #ebb7b3;
   width: 100%;
-  height: 100vh;
-  font-size: 6.55rem;
+  font-size: 17vw;
   pointer-events: none;
-  opacity: 0.2;
+  opacity: 0.4;
   z-index: -2;
 }
 #contact img {
-  width: 7vw;
-  height: 7vw;
+  width: 5vw;
+  height: 5vw;
 }
 #contact .contact-icons {
   cursor: pointer;
-  padding-left: 3%;
 }
 #contact .contact-icons a {
-  padding: 0.5rem;
+  padding: 0.2rem;
   color: #fff;
 }
 #contact .contact-icons a svg {
   color: #000;
 }
-#contact .box-bottom {
-  position: absolute;
-  bottom: 0;
-  height: 20vh;
-  width: 100%;
-  background-color: #ebb7b3;
-  box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-  border-bottom-right-radius: 0.1rem;
+
+/*
+@media (max-width: 1550px) {
+  #contact-mobile,
+  #impressum-mobile {
+    display: none;
+  }
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .backgroundcontainer {
+      position: absolute;
+      width: 100%;
+      z-index: -2;
+
+      .backgroundcontact {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        font-size: 3rem;
+        width: 100%;
+        height: 100vh;
+      }
+    }
+  }
 }
 
+//mobile
 @media (max-width: 480px) {
   #contact {
     display: none;
@@ -1221,66 +1044,73 @@ body {
     height: 50vh;
     width: 100%;
     display: flex;
-  }
-  #impressum-mobile .box-bottom {
-    position: absolute;
-    margin-top: 15rem;
-    height: 35vh;
-    width: clamp(100%, 50vw, 50vw);
-    background-color: #ebb7b3;
-    box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
-    border-bottom-right-radius: 0.1rem;
-    opacity: 0.5;
-    z-index: -2;
-  }
-  #impressum-mobile .title {
-    position: absolute;
-    font-family: "Caviar Dreams Bold";
-    color: #000;
-    font-size: 1rem;
-    z-index: 10;
-  }
-  #impressum-mobile .impressum {
-    top: 973%;
-    left: 36%;
-  }
-  #impressum-mobile .copyright {
-    top: 983%;
-    left: 35%;
-  }
-  #impressum-mobile p {
-    position: absolute;
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 0.7rem;
-    text-align: justify;
-    padding: 0.5rem;
-  }
-  #impressum-mobile .impressumname {
-    top: 975%;
-    left: 30.5%;
-  }
-  #impressum-mobile .impressumcity {
-    top: 977%;
-    left: 32%;
-  }
-  #impressum-mobile .impressummail {
-    top: 979%;
-    left: 24%;
-  }
-  #impressum-mobile .copyrighttext {
-    top: 986%;
-    right: 1rem;
-    left: 1rem;
-  }
-  #impressum-mobile .copyrightinfo {
-    top: 994%;
-    left: 1rem;
-  }
-  #impressum-mobile .copyrightcityyear {
-    top: 997%;
-    left: 31%;
+
+    .box {
+      &-bottom {
+        position: absolute;
+        margin-top: 15rem;
+        height: 35vh;
+        width: clamp(100%, 50vw, 50vw);
+        background-color: $primary;
+        box-shadow: 1px 0 0.5rem rgba(0, 0, 0, 0.5);
+        border-bottom-right-radius: 0.1rem;
+        opacity: 0.5;
+        z-index: -2;
+      }
+    }
+
+    .title {
+      position: absolute;
+      font-family: "Caviar Dreams Bold";
+      color: $black;
+      font-size: 1rem;
+      z-index: 10;
+    }
+    .impressum {
+      top: 973%;
+      left: 36%;
+    }
+    .copyright {
+      top: 983%;
+      left: 35%;
+    }
+    p {
+      position: absolute;
+      font-family: "Caviar Dreams";
+      color: $black;
+      font-size: 0.7rem;
+      text-align: justify;
+      padding: 0.5rem;
+    }
+
+    .impressumname {
+      top: 975%;
+      left: 30.5%;
+    }
+    .impressumcity {
+      top: 977%;
+      left: 32%;
+    }
+    .impressummail {
+      top: 979%;
+      left: 24%;
+    }
+
+    .copyrighttext {
+      top: 986%;
+      right: 1rem;
+      left: 1rem;
+    }
+    .copyrightinfo {
+      top: 994%;
+      left: 1rem;
+    }
+    .copyrightcityyear {
+      top: 997%;
+      left: 31%;
+    }
   }
 }
+*/
 
 /*# sourceMappingURL=style.css.map */

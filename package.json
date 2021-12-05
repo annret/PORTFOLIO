@@ -16,7 +16,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "sass scss/agency.scss css/style.css"
+    "build": "sass scss/agency.scss public/css/style.css"
   },
   "author": "",
   "license": "ISC"

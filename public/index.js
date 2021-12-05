@@ -1,3 +1,10 @@
+//loading-screen
+$(window).on('load',function(){
+  $(".loader").fadeOut(3800);
+  $(".content").fadeIn(4000);
+});
+
+
 
 /*//scroll effect
 gsap.registerPlugin(ScrollTrigger);
