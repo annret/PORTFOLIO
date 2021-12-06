@@ -22,11 +22,6 @@ html {
   font-size: 60px;
 }
 
-@media (max-width: 1250px) {
-  html {
-    font-size: 60px;
-  }
-}
 @media (max-width: 1000px) {
   html {
     font-size: 40px;
@@ -557,92 +552,65 @@ a {
   align-items: center !important;
 }
 
-@media (max-width: 1000px) {
-  #timeline .flex-left .line {
-    top: 20%;
-  }
-  #timeline .flex-middle .line {
-    top: 20%;
-  }
-  #timeline .flex-right .line {
-    top: 20%;
-  }
-}
-@media (max-width: 700px) {
-  #timeline .flex-left .line {
-    top: 15%;
-  }
-  #timeline .flex-middle .line {
-    top: 15%;
-  }
-  #timeline .flex-right .line {
-    top: 15%;
-  }
-}
-@media (max-width: 500px) {
-  #timeline .flex-left .line {
-    top: 10%;
-  }
-  #timeline .flex-middle .line {
-    top: 10%;
-  }
-  #timeline .flex-right .line {
-    top: 10%;
-  }
-}
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   #timeline {
     display: none;
   }
 
-  #timeline1-mobile {
-    height: 71vh;
-  }
-
-  #timeline2-mobile {
-    height: 100vh;
-  }
-
-  #timeline1-mobile,
-#timeline2-mobile {
+  #timeline-mobile {
     width: 100%;
     display: flex;
+    position: relative;
+    flex-wrap: wrap;
   }
-  #timeline1-mobile .background20,
-#timeline2-mobile .background20 {
+  #timeline-mobile .line {
     position: absolute;
-    top: 540%;
-    left: 1rem;
+    height: 100%;
+    width: 2vw;
+    background: #ebb7b3;
+    left: 27%;
+    border-radius: 10px;
+  }
+  #timeline-mobile .backgroundcontainer-mobile {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+  }
+  #timeline-mobile .backgroundcontainer-mobile .background20-mobile {
     font-family: "Caviar Dreams Bold";
     writing-mode: vertical-lr;
     color: #ebb7b3;
-    font-size: 16rem;
+    font-size: 75vw;
     opacity: 0.2;
     z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: -5%;
+    width: 100%;
   }
-  #timeline1-mobile .title,
-#timeline2-mobile .title {
-    position: absolute;
-    top: 515%;
-    left: 26%;
+  #timeline-mobile .timeline-element {
+    display: flex;
+    width: 100%;
+    padding-bottom: 0.5rem;
+  }
+  #timeline-mobile .title {
     font-family: "Caviar Dreams Bold";
     color: #000;
     font-size: 2rem;
     z-index: 10;
   }
-  #timeline1-mobile .left,
-#timeline2-mobile .left {
-    max-width: 30%;
+  #timeline-mobile .left {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    position: relative;
-    height: 100vh;
-    width: 30%;
+    width: 30% !important;
+    padding: 0;
   }
-  #timeline1-mobile .left .box-top-left,
-#timeline2-mobile .left .box-top-left {
+  #timeline-mobile .left .box-top-left {
     position: absolute;
     height: 35vh;
     width: clamp(100%, 50vw, 50vw);
@@ -651,69 +619,35 @@ a {
     border-bottom-right-radius: 0.1rem;
     z-index: -2;
   }
-  #timeline1-mobile .left .top,
-#timeline2-mobile .left .top {
+  #timeline-mobile .left .top {
     padding-top: 18rem;
   }
-  #timeline1-mobile .left .year,
-#timeline2-mobile .left .year {
+  #timeline-mobile .left .year {
     font-family: "Caviar Dreams Bold";
     color: #000;
     font-size: 2rem;
     padding: 0.5rem;
-    padding-bottom: 6rem;
     z-index: 10;
   }
-  #timeline1-mobile .left .year19,
-#timeline2-mobile .left .year19 {
-    padding-top: 1.5rem;
-  }
-  #timeline1-mobile .left .year20,
-#timeline2-mobile .left .year20 {
-    padding-top: 6rem;
-  }
-  #timeline1-mobile .left .line,
-#timeline2-mobile .left .line {
-    position: absolute;
-    height: 150%;
-    left: 70%;
-    width: clamp(5%, 50vw, 5vw);
-    background: #ebb7b3;
-    z-index: -1;
-  }
-  #timeline1-mobile .right,
-#timeline2-mobile .right {
-    max-width: 70%;
+  #timeline-mobile .right {
     display: flex;
-    justify-self: flex-start;
+    justify-content: center;
     align-items: flex-start;
     flex-direction: column;
     position: relative;
-    height: 100vh;
-    width: 70%;
-    top: 2rem;
+    width: 70% !important;
   }
-  #timeline1-mobile .right .top,
-#timeline2-mobile .right .top {
-    padding-top: 16rem;
-  }
-  #timeline1-mobile .right p,
-#timeline2-mobile .right p {
-    font-family: "Caviar Dreams";
-    color: #000;
-    font-size: 1rem;
+  #timeline-mobile .right p {
+    font-size: 0.7em;
     padding: 0.5rem;
+    text-align: left;
+    line-height: 1rem;
   }
-  #timeline1-mobile .right .ongoing,
-#timeline2-mobile .right .ongoing {
+  #timeline-mobile .right .ongoing {
     font-family: "Caviar Dreams Bold";
     color: #ebb7b3;
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     padding: 0.1rem;
-  }
-  #timeline1-mobile .right .distance,
-#timeline2-mobile .right .distance {
-    padding-bottom: 3rem;
   }
 }
 #skills-mobile-programming,
@@ -989,8 +923,8 @@ a {
   z-index: -2;
 }
 #contact img {
-  width: 5vw;
-  height: 5vw;
+  width: 5.5vw;
+  height: 5.5vw;
 }
 #contact .contact-icons {
   cursor: pointer;

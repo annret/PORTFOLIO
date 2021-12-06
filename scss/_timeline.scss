@@ -85,101 +85,52 @@
   }
 }
 
-@media (max-width: 1000px) {
-  #timeline {
-    .flex-left {
-      .line {
-        top: 20%;
-      }
-    }
-    .flex-middle {
-      .line {
-        top: 20%;
-      }
-    }
-    .flex-right {
-      .line {
-        top: 20%;
-      }
-    }
-  }
-}
-
-@media (max-width: 700px) {
-  #timeline {
-    .flex-left {
-      .line {
-        top: 15%;
-      }
-    }
-    .flex-middle {
-      .line {
-        top: 15%;
-      }
-    }
-    .flex-right {
-      .line {
-        top: 15%;
-      }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  #timeline {
-    .flex-left {
-      .line {
-        top: 10%;
-      }
-    }
-    .flex-middle {
-      .line {
-        top: 10%;
-      }
-    }
-    .flex-right {
-      .line {
-        top: 10%;
-      }
-    }
-  }
-}
-
 //mobile
-@media (max-width: 480px) {
+@media (max-width: 650px) {
   #timeline {
     display: none;
   }
 
-  #timeline1-mobile {
-    height: 71vh;
-  }
-  #timeline2-mobile {
-    height: 100vh;
-  }
-
-  #timeline1-mobile,
-  #timeline2-mobile {
+  #timeline-mobile {
     width: 100%;
     display: flex;
+    position: relative;
+    flex-wrap: wrap;
 
-    .background20 {
-      //position: fixed;
+    .line {
       position: absolute;
-      top: 540%;
-      left: 1rem;
-      font-family: "Caviar Dreams Bold";
-      writing-mode: vertical-lr;
-      color: $primary;
-      font-size: 16rem;
-      opacity: 0.2;
-      z-index: -2;
+      height: 100%;
+      width: 2vw;
+      background: $primary;
+      left: 27%;
+      border-radius: 10px;
     }
-
-    .title {
+    .backgroundcontainer-mobile {
+      width: 100%;
       position: absolute;
-      top: 515%;
-      left: 26%;
+      height: 100%;
+      .background20-mobile {
+        font-family: "Caviar Dreams Bold";
+        writing-mode: vertical-lr;
+        color: $primary;
+        font-size: 75vw;
+        opacity: 0.2;
+        z-index: -2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: -5%;
+        width: 100%;
+      }
+    }
+    .timeline-element {
+      display: flex;
+      width: 100%;
+      padding-bottom: 0.5rem;
+    }
+    .title {
       font-family: "Caviar Dreams Bold";
       color: $black;
       font-size: 2rem;
@@ -187,15 +138,12 @@
     }
 
     .left {
-      max-width: 30%;
       display: flex;
-      justify-content: flex-start;
+      justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-      position: relative;
-      height: 100vh;
-      width: 30%;
-
+      width: 30% !important;
+      padding: 0;
       .box {
         &-top-left {
           position: absolute;
@@ -216,53 +164,29 @@
         color: $black;
         font-size: 2rem;
         padding: 0.5rem;
-        padding-bottom: 6rem;
-        z-index: 10;
-      }
-      .year19 {
-        padding-top: 1.5rem;
-      }
-      .year20 {
-        padding-top: 6rem;
-      }
 
-      .line {
-        position: absolute;
-        height: 150%;
-        left: 70%;
-        width: clamp(5%, 50vw, 5vw);
-        background: $primary;
-        z-index: -1;
+        z-index: 10;
       }
     }
     .right {
-      max-width: 70%;
       display: flex;
-      justify-self: flex-start;
+      justify-content: center;
       align-items: flex-start;
       flex-direction: column;
       position: relative;
-      height: 100vh;
-      width: 70%;
-      top: 2rem;
+      width: 70% !important;
 
-      .top {
-        padding-top: 16rem;
-      }
       p {
-        font-family: "Caviar Dreams";
-        color: $black;
-        font-size: 1rem;
+        font-size: 0.7em;
         padding: 0.5rem;
+        text-align: left;
+        line-height: 1rem;
       }
       .ongoing {
         font-family: "Caviar Dreams Bold";
         color: $primary;
-        font-size: 0.7rem;
+        font-size: 0.5rem;
         padding: 0.1rem;
-      }
-      .distance {
-        padding-bottom: 3rem;
       }
     }
   }
