@@ -4,6 +4,8 @@
 }
 html {
   font-size: 60px;
+}
+.all {
   overflow-x: hidden;
 }
 @media (max-width: 1000px) {
@@ -29,6 +31,7 @@ html {
 }
 body {
   hyphens: auto;
+  position: relative;
 }
 p {
   font-family: "Caviar Dreams";

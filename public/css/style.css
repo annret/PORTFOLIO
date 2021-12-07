@@ -20,6 +20,9 @@
 
 html {
   font-size: 60px;
+}
+
+.all {
   overflow-x: hidden;
 }
 
@@ -48,6 +51,7 @@ html {
 }
 body {
   hyphens: auto;
+  position: relative;
 }
 
 p {
