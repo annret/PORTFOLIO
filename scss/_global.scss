@@ -32,9 +32,10 @@ body {
 p {
   font-family: "Caviar Dreams";
   color: $black;
-  font-size: 0.45rem;
+  font-size: 0.5rem;
   text-align: justify;
-  line-height: 0.65rem;
+  line-height: 0.7rem;
+  hyphens: auto;
 }
 .container {
   width: 100%;

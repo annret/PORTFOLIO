@@ -41,7 +41,7 @@
   }
   .left {
     display: flex;
-    width: 32%;
+    width: 40%;
     .title-2 {
       width: 100%;
       display: flex;
@@ -61,13 +61,14 @@
 
   .right {
     display: flex;
-    width: 68%;
+    width: 60%;
     padding-top: 1rem;
 
     li {
       font-family: "Caviar Dreams Bold";
       color: $black;
       list-style: none;
+      font-size: 80px;
       line-height: 1rem;
       font-size: 0.6rem;
     }
@@ -76,7 +77,6 @@
       display: flex;
       align-items: center;
       position: relative;
-      padding-left: 2rem;
 
       .line {
         position: absolute;
@@ -141,7 +141,7 @@
   .left {
     display: flex;
     justify-content: flex-end;
-    width: 68%;
+    width: 60%;
 
     ul {
       text-align: right;
@@ -150,6 +150,7 @@
         font-family: "Caviar Dreams Bold";
         color: $black;
         list-style: none;
+        font-size: 80px;
         line-height: 1rem;
         font-size: 0.6rem;
       }
@@ -171,7 +172,7 @@
     }
     .left-left {
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       position: relative;
       padding-left: 2rem;
       .line {
@@ -188,7 +189,7 @@
 
   .right {
     display: flex;
-    width: 32%;
+    width: 40%;
     .title-2 {
       padding: 0 0;
       width: 100%;

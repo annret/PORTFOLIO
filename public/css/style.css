@@ -52,9 +52,10 @@ body {
 p {
   font-family: "Caviar Dreams";
   color: #000;
-  font-size: 0.45rem;
+  font-size: 0.5rem;
   text-align: justify;
-  line-height: 0.65rem;
+  line-height: 0.7rem;
+  hyphens: auto;
 }
 
 .container {
@@ -688,7 +689,7 @@ a {
 }
 #programming-skills .left {
   display: flex;
-  width: 32%;
+  width: 40%;
 }
 #programming-skills .left .title-2 {
   width: 100%;
@@ -707,13 +708,14 @@ a {
 }
 #programming-skills .right {
   display: flex;
-  width: 68%;
+  width: 60%;
   padding-top: 1rem;
 }
 #programming-skills .right li {
   font-family: "Caviar Dreams Bold";
   color: #000;
   list-style: none;
+  font-size: 80px;
   line-height: 1rem;
   font-size: 0.6rem;
 }
@@ -721,7 +723,6 @@ a {
   display: flex;
   align-items: center;
   position: relative;
-  padding-left: 2rem;
 }
 #programming-skills .right .right-left .line {
   position: absolute;
@@ -780,7 +781,7 @@ a {
 #creative-skills .left {
   display: flex;
   justify-content: flex-end;
-  width: 68%;
+  width: 60%;
 }
 #creative-skills .left ul {
   text-align: right;
@@ -790,6 +791,7 @@ a {
   font-family: "Caviar Dreams Bold";
   color: #000;
   list-style: none;
+  font-size: 80px;
   line-height: 1rem;
   font-size: 0.6rem;
 }
@@ -810,7 +812,7 @@ a {
 }
 #creative-skills .left .left-left {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
   padding-left: 2rem;
 }
@@ -825,7 +827,7 @@ a {
 }
 #creative-skills .right {
   display: flex;
-  width: 32%;
+  width: 40%;
 }
 #creative-skills .right .title-2 {
   padding: 0 0;
@@ -900,7 +902,7 @@ a {
   align-items: center;
   width: 100%;
   flex-wrap: wrap;
-  padding: 17vw 0;
+  padding: 7vw 0;
 }
 #contact .backgroundcontainer {
   display: flex;
@@ -926,17 +928,31 @@ a {
   height: 5vw;
 }
 #contact .contact-icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   cursor: pointer;
 }
 #contact .contact-icons a {
   padding: 0.2rem;
   color: #fff;
 }
+#contact p {
+  justify-content: center;
+  font-family: "Caviar Dreams";
+  font-size: 30px;
+  color: #000;
+  padding-top: 1.5rem;
+}
 
 @media (max-width: 650px) {
   #contact img {
     width: 7vw;
     height: 7vw;
+  }
+
+  p {
+    font-size: 15px !important;
   }
 }
 
