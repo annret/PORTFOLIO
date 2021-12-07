@@ -20,6 +20,7 @@
 
 html {
   font-size: 60px;
+  overflow-x: hidden;
 }
 
 @media (max-width: 1000px) {
@@ -81,6 +82,29 @@ a {
   text-decoration: none;
 }
 
+/*
+body {
+  height: 100vh;
+  cursor: none;
+  margin: 0;
+
+  .cursor {
+    pointer-events: none;
+
+    &__ball {
+      position: fixed;
+      top: 0;
+      left: 0;
+      mix-blend-mode: difference;
+      z-index: 1000;
+
+      circle {
+        fill: #ebb7b3;
+      }
+    }
+  }
+}
+*/
 #hero-mobile {
   display: none;
 }
@@ -483,14 +507,15 @@ a {
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 200vh;
-  width: 100%;
-  flex-wrap: wrap;
+  height: 100vh;
+  width: 200%;
+  flex-wrap: nowrap;
 }
 #timeline .backgroundcontainer {
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 100%;
+  left: 0;
 }
 #timeline .backgroundcontainer .background20 {
   display: flex;
@@ -507,10 +532,12 @@ a {
   z-index: -2;
 }
 #timeline .flexcontainer {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  height: 600px;
 }
 #timeline .flexcontainer .line {
   height: 2vh;
@@ -525,6 +552,7 @@ a {
   flex-direction: column;
   position: relative;
   width: 33%;
+  height: 200px;
 }
 #timeline .flexcontainer .flex .year {
   font-family: "Caviar Dreams Bold";
