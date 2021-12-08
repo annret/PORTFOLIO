@@ -86,29 +86,44 @@ a {
   text-decoration: none;
 }
 
-/*
-body {
-  height: 100vh;
-  cursor: none;
-  margin: 0;
+#magicMouseCursor {
+  border-color: #000 !important;
+}
 
-  .cursor {
-    pointer-events: none;
+#magicPointer {
+  background: #ebb7b3 !important;
+  opacity: 0.7;
+}
 
-    &__ball {
-      position: fixed;
-      top: 0;
-      left: 0;
-      mix-blend-mode: difference;
-      z-index: 1000;
+#magicPointer.pointer-blur {
+  background: #ebb7b3 !important;
+}
 
-      circle {
-        fill: #ebb7b3;
-      }
-    }
+@media (max-width: 650px) {
+  #magicMouseCursor,
+#magicPointer,
+#magicPointer.pointer-blur {
+    display: none;
   }
 }
-*/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #ebb7b3;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ebb7b3;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ebb7b3;
+}
+
 #hero-mobile {
   display: none;
 }
@@ -246,7 +261,7 @@ body {
 }
 
 #about {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
 }
 #about .left {
   display: flex;
@@ -256,6 +271,7 @@ body {
   width: 50%;
 }
 #about .left .about-me-h1 {
+  padding-bottom: 0.5rem;
   padding-left: 1rem;
   font-size: 8vw;
 }
@@ -274,7 +290,7 @@ body {
 #about .right .box-primary {
   height: 65%;
   position: absolute;
-  bottom: 0;
+  bottom: -0.5rem;
   right: 0;
   width: 95%;
   background: #ebb7b3;
@@ -690,12 +706,13 @@ body {
 #programming-skills {
   flex-wrap: wrap;
   position: relative;
-  padding-bottom: 3rem;
+  padding-top: 4rem;
 }
 #programming-skills .box-primary {
   height: 100%;
   width: 10%;
   position: absolute;
+  top: 3rem;
   bottom: 0;
   right: 0;
   background: #ebb7b3;
@@ -749,7 +766,7 @@ body {
   list-style: none;
   font-size: 80px;
   line-height: 1rem;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
 }
 #programming-skills .right .right-left {
   display: flex;
@@ -782,11 +799,14 @@ body {
 #creative-skills {
   flex-wrap: wrap;
   position: relative;
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
 }
 #creative-skills .box-primary {
   height: 100%;
   width: 10%;
   position: absolute;
+  top: 1.5rem;
   bottom: 0;
   left: 0;
   background: #ebb7b3;
@@ -814,6 +834,7 @@ body {
   display: flex;
   justify-content: flex-end;
   width: 60%;
+  padding-top: 1rem;
 }
 #creative-skills .left ul {
   text-align: right;
@@ -823,9 +844,8 @@ body {
   font-family: "Caviar Dreams Bold";
   color: #000;
   list-style: none;
-  font-size: 80px;
   line-height: 1rem;
-  font-size: 0.6rem;
+  font-size: 0.5rem;
 }
 #creative-skills .left .left-right {
   display: flex;
@@ -931,10 +951,10 @@ body {
 #contact {
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
   width: 100%;
   flex-wrap: wrap;
-  padding: 7vw 0;
+  padding-top: 14vw;
 }
 #contact .backgroundcontainer {
   display: flex;
@@ -959,22 +979,46 @@ body {
   width: 5vw;
   height: 5vw;
 }
+#contact .icon-size {
+  width: 4.3vw;
+  height: 4.3vw;
+}
 #contact .contact-icons {
   display: flex;
   justify-content: center;
   width: 100%;
-  cursor: pointer;
+  padding-bottom: 1.7rem;
 }
 #contact .contact-icons a {
   padding: 0.2rem;
   color: #fff;
 }
-#contact p {
-  justify-content: center;
+#contact .icons-container {
   font-family: "Caviar Dreams";
-  font-size: 30px;
-  color: #000;
-  padding-top: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+#contact .icons-container .copyright {
+  font-size: 0.3rem;
+  width: 100%;
+  line-height: 0.25rem;
+}
+#contact .icons-container .impressum {
+  align-items: flex-end;
+  text-align: center;
+  font-size: 0.25rem;
+  width: 100%;
+}
+#contact .icons-container .icons8 {
+  align-items: flex-start;
+  text-align: center;
+  color: #adb5bd;
+  font-size: 0.18rem;
+  line-height: 0.1rem;
+  width: 100%;
+  padding-bottom: 0.4rem;
 }
 
 @media (max-width: 650px) {
@@ -983,8 +1027,19 @@ body {
     height: 7vw;
   }
 
-  p {
+  .icon-size {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+
+  .icons-container .copyright {
     font-size: 15px !important;
+  }
+  .icons-container .impressum {
+    font-size: 12px !important;
+  }
+  .icons-container .icons8 {
+    font-size: 10px !important;
   }
 }
 

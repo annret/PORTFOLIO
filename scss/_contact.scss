@@ -8,10 +8,10 @@
 #contact {
   display: flex;
   justify-content: center;
-  align-items: center;
+  position: relative;
   width: 100%;
   flex-wrap: wrap;
-  padding: 7vw 0;
+  padding-top: 14vw;
 
   .backgroundcontainer {
     display: flex;
@@ -37,22 +37,47 @@
     width: 5vw;
     height: 5vw;
   }
+  .icon-size {
+    width: 4.3vw;
+    height: 4.3vw;
+  }
   .contact-icons {
     display: flex;
     justify-content: center;
     width: 100%;
-    cursor: pointer;
+    padding-bottom: 1.7rem;
     a {
       padding: 0.2rem;
       color: $white;
     }
   }
-  p {
-    justify-content: center;
+  .icons-container {
     font-family: "Caviar Dreams";
-    font-size: 30px;
-    color: $black;
-    padding-top: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+
+    .copyright {
+      font-size: 0.3rem;
+      width: 100%;
+      line-height: 0.25rem;
+    }
+    .impressum {
+      align-items: flex-end;
+      text-align: center;
+      font-size: 0.25rem;
+      width: 100%;
+    }
+    .icons8 {
+      align-items: flex-start;
+      text-align: center;
+      color: $gray-500;
+      font-size: 0.18rem;
+      line-height: 0.1rem;
+      width: 100%;
+      padding-bottom: 0.4rem;
+    }
   }
 }
 @media (max-width: 650px) {
@@ -62,7 +87,19 @@
       height: 7vw;
     }
   }
-  p {
-    font-size: 15px !important;
+  .icon-size {
+    width: 3.5vw;
+    height: 3.5vw;
+  }
+  .icons-container {
+    .copyright {
+      font-size: 15px !important;
+    }
+    .impressum {
+      font-size: 12px !important;
+    }
+    .icons8 {
+      font-size: 10px !important;
+    }
   }
 }

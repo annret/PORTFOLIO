@@ -63,3 +63,22 @@ a {
   color: $black;
   text-decoration: none;
 }
+
+#magicMouseCursor {
+  border-color: $black !important;
+}
+#magicPointer {
+  background: $primary !important;
+  opacity: 0.7;
+}
+#magicPointer.pointer-blur {
+  background: $primary !important;
+}
+
+@media (max-width: 650px) {
+  #magicMouseCursor,
+  #magicPointer,
+  #magicPointer.pointer-blur {
+    display: none;
+  }
+}
