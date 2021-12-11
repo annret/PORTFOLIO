@@ -3,15 +3,15 @@ gsap.registerPlugin(ScrollTrigger);
 let sections = gsap.utils.toArray(".flexcontainer");
 
 gsap.to(sections, {
-  xPercent: -100 * (sections.length - 1),
+  xPercent: -100 * (sections.length -1),
   ease: "none",
   scrollTrigger: {
     trigger: "#timeline",
-    pin: true,
-    scrub: 1,
-    snap: 1 / (sections.length - 1),
+   pin: true,
+   scrub: 1,
+
     // base vertical scrolling on how wide the container is so it feels more natural.
-    end: "+=3500",
+    end: "+=4500",
   }
 });
 
@@ -25,6 +25,7 @@ options = {
   "outerWidth": 30,
   "outerHeight": 30,
       };
+      
     magicMouse(options);
 
 

@@ -38,7 +38,13 @@
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    height: 600px;
+    height: 500px;
+    &.flex-end {
+      justify-content: flex-end;
+    }
+    &.flex-start {
+      justify-content: flex-start;
+    }
     .line {
       height: 2vh;
       width: 100%;
@@ -87,6 +93,7 @@
 @media (max-width: 650px) {
   #timeline {
     display: none;
+    pointer-events: none;
   }
 
   #timeline-mobile {
