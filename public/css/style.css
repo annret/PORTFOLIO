@@ -536,11 +536,6 @@ a {
 #projects .right img {
   width: 100%;
 }
-#projects .right .img-MTM {
-  width: auto;
-  height: 85vh;
-  max-height: 15rem;
-}
 
 @media (max-width: 650px) {
   .right,
@@ -562,10 +557,7 @@ a {
     pointer-events: none;
   }
   #projects .right .img-MTM {
-    width: 220px;
-    aspect-ratio: 255/482;
-    height: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
   }
 }
 #timeline-mobile {
