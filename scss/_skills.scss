@@ -242,6 +242,11 @@
     }
   }
   #creative-skills {
+    .title-1 {
+      h1 {
+        font-size: 9vw;
+      }
+    }
     .left {
       justify-content: flex-end;
       padding: 1rem;
@@ -261,7 +266,6 @@
       .title-2 {
         h1 {
           padding-right: 0;
-          font-size: 9vw;
         }
       }
       order: 1;
