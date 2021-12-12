@@ -15,7 +15,7 @@ gsap.to(sections, {
   }
 });
 
-
+//animation project-images
 ScrollTrigger.matchMedia({
 
   "(min-width: 650px)": function(){
@@ -54,8 +54,26 @@ ScrollTrigger.matchMedia({
       y :  -100,
     });
   }
-  
 });
+
+
+//animation project-headline
+
+// var fadeStart = 100; // 100px scroll or less will equiv to 1 opacity
+// var fadeUntil = 200; // 200px scroll or more will equiv to 0 opacity
+// var headline = $('#project-headline');
+
+// $(window).bind('scroll', function(){
+//     var offset = $(document).scrollTop()
+//         ,opacity=0
+//     ;
+//     if( offset<=fadeStart ){
+//         opacity=1;
+//     }else if( offset<=fadeUntil ){
+//         opacity=1-offset/fadeUntil;
+//     }
+//     headline.css('opacity',opacity).html(opacity);
+// });
 
 
 //circle cursor
