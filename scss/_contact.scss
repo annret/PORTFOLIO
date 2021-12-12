@@ -29,13 +29,9 @@
       width: 100%;
       font-size: 17vw;
       pointer-events: none;
-      opacity: 0.4;
+      opacity: 0.8;
       z-index: -2;
     }
-  }
-  img {
-    width: 5vw;
-    height: 5vw;
   }
   .icon-size {
     width: 4.3vw;
@@ -81,25 +77,21 @@
 }
 @media (max-width: 650px) {
   #contact {
-    img {
-      width: 7vw;
-      height: 7vw;
+    .icon-size {
+      width: 6vw;
+      height: 6vw;
     }
-  }
-  .icon-size {
-    width: 3.5vw;
-    height: 3.5vw;
-  }
-  .icons-container {
-    .copyright {
-      font-size: 15px !important;
-    }
-    .impressum {
-      font-size: 12px !important;
-      padding: 0.1rem;
-    }
-    .icons8 {
-      font-size: 10px !important;
+    .icons-container {
+      .copyright {
+        font-size: 15px !important;
+      }
+      .impressum {
+        font-size: 12px !important;
+        padding: 0.1rem;
+      }
+      .icons8 {
+        font-size: 10px !important;
+      }
     }
   }
 }
