@@ -935,7 +935,7 @@ a {
   }
 
   #creative-skills .title-1 h1 {
-    font-size: 9vw;
+    font-size: 9.5vw;
   }
   #creative-skills .left {
     justify-content: flex-end;
@@ -957,6 +957,7 @@ a {
   }
   #creative-skills .right .title-2 h1 {
     padding-right: 0;
+    font-size: 9.5vw;
   }
 }
 #contact-mobile,
