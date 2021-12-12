@@ -57,25 +57,6 @@ ScrollTrigger.matchMedia({
 });
 
 
-//animation project-headline
-
-// var fadeStart = 100; // 100px scroll or less will equiv to 1 opacity
-// var fadeUntil = 200; // 200px scroll or more will equiv to 0 opacity
-// var headline = $('#project-headline');
-
-// $(window).bind('scroll', function(){
-//     var offset = $(document).scrollTop()
-//         ,opacity=0
-//     ;
-//     if( offset<=fadeStart ){
-//         opacity=1;
-//     }else if( offset<=fadeUntil ){
-//         opacity=1-offset/fadeUntil;
-//     }
-//     headline.css('opacity',opacity).html(opacity);
-// });
-
-
 //circle cursor
 options = {
   "cursorOuter": "circle-basic",
@@ -89,5 +70,69 @@ options = {
     magicMouse(options);
 
 
+    //back-to-top button
+window.onscroll = function() {scrollFunction()};
+
+var backToTop = document.getElementById("Top");
+
+  function scrollFunction() 
+  {
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) 
+      {
+        backToTop.style.display = "block";
+      } 
+      else 
+      {
+        backToTop.style.display = "none";
+      }
+  }
+
+  function topFunction() 
+  {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
 
 
+    var elements;
+    var windowHeight;
+  
+    function init() {
+      elements = document.querySelectorAll('#projects p');
+      listelements1 = document.querySelectorAll('#programming-skills li');
+      listelements2 = document.querySelectorAll('#creative-skills li');
+      windowHeight = window.innerHeight;
+    }
+  
+    function checkPosition() {
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var positionFromTop = elements[i].getBoundingClientRect().top;
+        
+        if (positionFromTop - windowHeight <= 0) {
+          element.classList.add('p-animation');
+        }
+      }
+      for (var i = 0; i < listelements1.length; i++) {
+        var element = listelements1[i];
+        var positionFromTop = listelements1[i].getBoundingClientRect().top;
+        
+        if (positionFromTop - windowHeight <= 100) {
+          element.classList.add('li-animation');
+        }
+      }
+      for (var i = 0; i < listelements2.length; i++) {
+        var element = listelements2[i];
+        var positionFromTop = listelements2[i].getBoundingClientRect().top;
+        
+        if (positionFromTop - windowHeight <= 0) {
+          element.classList.add('li-animation');
+        }
+      }
+    }
+  
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', init);
+  
+    init();
+    checkPosition();

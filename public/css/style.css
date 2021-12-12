@@ -64,8 +64,8 @@ body {
 
 p {
   font-family: "Caviar Dreams";
-  color: #000;
-  font-size: 0.45rem;
+  color: #333333;
+  font-size: 0.4rem;
   text-align: justify;
   line-height: 0.65rem;
   hyphens: auto;
@@ -95,12 +95,12 @@ p {
 }
 
 a {
-  color: #000;
+  color: #333333;
   text-decoration: none;
 }
 
 #magicMouseCursor {
-  border-color: #000 !important;
+  border-color: #333333 !important;
 }
 
 #magicPointer {
@@ -130,6 +130,21 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ebb7b3;
+}
+
+#Top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+  cursor: pointer;
+  background-color: none;
+  z-index: 10;
+}
+
+#Top:hover {
+  color: #ebb7b3;
 }
 
 #hero-mobile {
@@ -192,7 +207,7 @@ a {
 #hero .left .firstname {
   font-family: "Caviar Dreams Bold";
   padding-top: 40vh;
-  color: #000;
+  color: #333333;
   font-size: 1.5rem;
   padding-right: 10px;
   z-index: 10;
@@ -220,7 +235,7 @@ a {
 }
 #hero .right .subtitle {
   font-family: "Caviar Dreams";
-  color: #000;
+  color: #333333;
   font-size: 0.8rem;
   margin-top: 0%;
   z-index: 10;
@@ -268,7 +283,7 @@ a {
   }
   #hero-mobile .middle .firstname {
     font-family: "Caviar Dreams Bold";
-    color: #000;
+    color: #333333;
     font-size: 13vw;
     z-index: 10;
   }
@@ -280,7 +295,7 @@ a {
   }
   #hero-mobile .middle .subtitle {
     font-family: "Caviar Dreams";
-    color: #000;
+    color: #333333;
     font-size: 7vw;
     z-index: 10;
   }
@@ -502,14 +517,31 @@ a {
   opacity: 0.8;
 }
 #projects .left .project-title .title {
+  position: relative;
   font-family: "Caviar Dreams Bold";
-  color: #000;
+  color: #333333;
   font-size: 1.5rem;
   z-index: 10;
 }
 #projects .left .link-underline {
   text-decoration: underline #ebb7b3 0.1rem;
   text-decoration-skip-ink: none;
+}
+@keyframes text {
+  0% {
+    top: 200vh;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 100;
+  }
+}
+#projects .left .p-animation {
+  position: relative;
+  animation-name: text;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 #projects .left p {
   padding-left: 1rem;
@@ -624,7 +656,7 @@ a {
 }
 #timeline .flexcontainer .flex .year {
   font-family: "Caviar Dreams Bold";
-  color: #000;
+  color: #333333;
   font-size: 2rem;
   padding-bottom: 1.5rem;
   writing-mode: vertical-lr;
@@ -695,7 +727,7 @@ a {
   }
   #timeline-mobile .title {
     font-family: "Caviar Dreams Bold";
-    color: #000;
+    color: #333333;
     font-size: 2rem;
     z-index: 10;
   }
@@ -721,7 +753,7 @@ a {
   }
   #timeline-mobile .left .year {
     font-family: "Caviar Dreams Bold";
-    color: #000;
+    color: #333333;
     font-size: 2rem;
     padding: 0.5rem;
     z-index: 10;
@@ -811,7 +843,7 @@ a {
 }
 #programming-skills .right li {
   font-family: "Caviar Dreams Bold";
-  color: #000;
+  color: #333333;
   list-style: none;
   font-size: 80px;
   line-height: 1rem;
@@ -822,11 +854,27 @@ a {
   align-items: center;
   position: relative;
 }
+@keyframes listelement-right {
+  0% {
+    right: 40px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+#programming-skills .right .right-left .li-animation {
+  position: relative;
+  animation-name: listelement-right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
 #programming-skills .right .right-left .line {
   position: absolute;
   height: 100%;
   width: 0.5vw;
-  background: #000;
+  background: #333333;
   border-radius: 5px;
   z-index: -1;
 }
@@ -836,11 +884,27 @@ a {
   position: relative;
   padding-left: 2rem;
 }
+@keyframes listelement-right {
+  0% {
+    right: 40px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+#programming-skills .right .right-right .li-animation {
+  position: relative;
+  animation-name: listelement-right;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
 #programming-skills .right .right-right .line {
   position: absolute;
   height: 100%;
   width: 0.5vw;
-  background: #000;
+  background: #333333;
   border-radius: 5px;
   z-index: -1;
 }
@@ -850,6 +914,22 @@ a {
   position: relative;
   padding-top: 3.5rem;
   padding-bottom: 1rem;
+}
+@keyframes listelement-left {
+  0% {
+    left: 40px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+#creative-skills .li-animation {
+  position: relative;
+  animation-name: listelement-left;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 #creative-skills .box-primary {
   height: 100%;
@@ -891,7 +971,7 @@ a {
 }
 #creative-skills .left ul li {
   font-family: "Caviar Dreams Bold";
-  color: #000;
+  color: #333333;
   list-style: none;
   line-height: 1rem;
   font-size: 0.5rem;
@@ -907,7 +987,7 @@ a {
   height: 100%;
   width: 0.5vw;
   right: 0;
-  background: #000;
+  background: #333333;
   border-radius: 5px;
   z-index: -1;
 }
@@ -922,7 +1002,7 @@ a {
   height: 100%;
   width: 0.5vw;
   right: 0;
-  background: #000;
+  background: #333333;
   border-radius: 5px;
   z-index: -1;
 }

@@ -34,7 +34,9 @@
         font-size: 6.5rem;
         opacity: 0.8;
       }
+
       .title {
+        position: relative;
         font-family: "Caviar Dreams Bold";
         color: $black;
         font-size: 1.5rem;
@@ -44,6 +46,22 @@
     .link-underline {
       text-decoration: underline $primary 0.1rem;
       text-decoration-skip-ink: none;
+    }
+    @keyframes text {
+      0% {
+        top: 200vh;
+        opacity: 0;
+      }
+      100% {
+        top: 0;
+        opacity: 100;
+      }
+    }
+    .p-animation {
+      position: relative;
+      animation-name: text;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
     }
     p {
       padding-left: 1rem;

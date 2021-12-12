@@ -79,6 +79,22 @@
       align-items: center;
       position: relative;
 
+      @keyframes listelement-right {
+        0% {
+          right: 40px;
+          opacity: 0;
+        }
+        100% {
+          right: 0;
+          opacity: 1;
+        }
+      }
+      .li-animation {
+        position: relative;
+        animation-name: listelement-right;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
       .line {
         position: absolute;
         height: 100%;
@@ -93,6 +109,23 @@
       align-items: center;
       position: relative;
       padding-left: 2rem;
+
+      @keyframes listelement-right {
+        0% {
+          right: 40px;
+          opacity: 0;
+        }
+        100% {
+          right: 0;
+          opacity: 1;
+        }
+      }
+      .li-animation {
+        position: relative;
+        animation-name: listelement-right;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      }
       .line {
         position: absolute;
         height: 100%;
@@ -111,6 +144,22 @@
   padding-top: 3.5rem;
   padding-bottom: 1rem;
 
+  @keyframes listelement-left {
+    0% {
+      left: 40px;
+      opacity: 0;
+    }
+    100% {
+      left: 0;
+      opacity: 1;
+    }
+  }
+  .li-animation {
+    position: relative;
+    animation-name: listelement-left;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
   .box {
     &-primary {
       height: 100%;
