@@ -89,6 +89,7 @@ p {
 }
 .title h1 {
   font-family: "Caviar Dreams Bold";
+  font-size: 15vw;
   padding: 1.25rem 0;
   margin-inline-start: 0;
   color: #ebb7b3;
