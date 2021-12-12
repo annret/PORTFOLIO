@@ -65,7 +65,7 @@
   .right {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     width: 50%;
 
@@ -74,7 +74,7 @@
     }
     .img-MTM {
       width: auto;
-      height: 100vh;
+      height: 85vh;
       max-height: 15rem;
     }
   }
@@ -94,6 +94,8 @@
     padding-right: 2rem !important;
   }
   #projects {
+    pointer-events: none;
+
     .right {
       .img-MTM {
         width: 220px;

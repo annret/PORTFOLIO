@@ -136,6 +136,38 @@ a {
   display: none;
 }
 
+@keyframes flyintop {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes flyinbottom {
+  0% {
+    top: 200vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes flyinleft {
+  0% {
+    left: -100vh;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes flyinright {
+  0% {
+    left: 200vh;
+  }
+  100% {
+    left: 0;
+  }
+}
 #hero .left {
   max-width: 50%;
   display: flex;
@@ -144,6 +176,9 @@ a {
   position: relative;
   height: 100vh;
   width: 50%;
+  animation-name: flyinbottom;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 #hero .left .box-primary {
   position: absolute;
@@ -163,11 +198,17 @@ a {
   z-index: 10;
 }
 #hero .right {
+  position: relative;
   min-width: 50%;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
   padding-left: 10px;
+  height: 100vh;
+  width: 50%;
+  animation-name: flyintop;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
 }
 #hero .right .lastname {
   font-family: "Caviar Dreams Bold";
@@ -488,7 +529,7 @@ a {
 #projects .right {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   position: relative;
   width: 50%;
 }
@@ -497,7 +538,7 @@ a {
 }
 #projects .right .img-MTM {
   width: auto;
-  height: 100vh;
+  height: 85vh;
   max-height: 15rem;
 }
 
@@ -517,6 +558,9 @@ a {
     padding-right: 2rem !important;
   }
 
+  #projects {
+    pointer-events: none;
+  }
   #projects .right .img-MTM {
     width: 220px;
     aspect-ratio: 255/482;
@@ -1013,7 +1057,7 @@ a {
 #contact .icons-container {
   font-family: "Caviar Dreams";
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
 }
@@ -1027,6 +1071,14 @@ a {
   text-align: center;
   font-size: 0.25rem;
   width: 100%;
+}
+#contact .icons-container .icons8 {
+  align-items: flex-end;
+  text-align: center;
+  font-size: 0.2rem;
+  width: 100%;
+  line-height: 0.25rem;
+  padding-bottom: 0.5rem;
 }
 
 @media (max-width: 650px) {

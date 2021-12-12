@@ -16,6 +16,48 @@ gsap.to(sections, {
 });
 
 
+ScrollTrigger.matchMedia({
+
+  "(min-width: 650px)": function(){
+    gsap.to("#img-project1", {
+      scrollTrigger: {
+          trigger:  "#img-project1",
+          scrub: 1,
+          markers: true,
+          end: "+=300px",
+          start: "top 20%"
+      }
+     ,
+      y :  -100,
+    });
+  
+    gsap.to("#img-project2", {
+      scrollTrigger: {
+          trigger:  "#img-project2",
+          scrub: 1,
+          markers: true,
+          end: "+=300px",
+          start: "top 50%"
+      }
+     ,
+      y :  -100,
+    });
+    gsap.to("#img-project3", {
+      scrollTrigger: {
+          trigger:  "#img-project3",
+          scrub: 1,
+          markers: true,
+          end: "+=300px",
+          start: "top 50%"
+      }
+     ,
+      y :  -100,
+    });
+  }
+  
+});
+
+
 //circle cursor
 options = {
   "cursorOuter": "circle-basic",

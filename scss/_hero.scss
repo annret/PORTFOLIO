@@ -3,6 +3,38 @@
 #hero-mobile {
   display: none;
 }
+@keyframes flyintop {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes flyinbottom {
+  0% {
+    top: 200vh;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes flyinleft {
+  0% {
+    left: -100vh;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes flyinright {
+  0% {
+    left: 200vh;
+  }
+  100% {
+    left: 0;
+  }
+}
 
 #hero {
   .left {
@@ -13,7 +45,9 @@
     position: relative;
     height: 100vh;
     width: 50%;
-
+    animation-name: flyinbottom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     .box {
       &-primary {
         position: absolute;
@@ -36,12 +70,17 @@
   }
 
   .right {
+    position: relative;
     min-width: 50%;
     display: flex;
     flex-direction: column;
     align-content: flex-start;
     padding-left: 10px;
-
+    height: 100vh;
+    width: 50%;
+    animation-name: flyintop;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
     .lastname {
       font-family: "Caviar Dreams Bold";
       color: $primary;
