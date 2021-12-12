@@ -42,6 +42,10 @@ html {
   }
 }
 @media (max-width: 650px) {
+  .all {
+    overflow-x: visible !important;
+  }
+
   .container {
     flex-flow: wrap;
   }
@@ -494,6 +498,7 @@ a {
 #projects .right .img-MTM {
   width: auto;
   height: 100vh;
+  max-height: 15rem;
 }
 
 @media (max-width: 650px) {
