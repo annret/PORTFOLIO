@@ -23,7 +23,7 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
           trigger:  "#img-project1",
           scrub: 1,
-          markers: true,
+          //markers: true,
           end: "+=300px",
           start: "top 20%"
       }
@@ -35,7 +35,7 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
           trigger:  "#img-project2",
           scrub: 1,
-          markers: true,
+          //markers: true,
           end: "+=300px",
           start: "top 50%"
       }
@@ -46,7 +46,7 @@ ScrollTrigger.matchMedia({
       scrollTrigger: {
           trigger:  "#img-project3",
           scrub: 1,
-          markers: true,
+          //markers: true,
           end: "+=300px",
           start: "top 50%"
       }
