@@ -89,7 +89,6 @@ p {
 }
 .title h1 {
   font-family: "Caviar Dreams Bold";
-  font-size: 15vw;
   padding: 1.25rem 0;
   margin-inline-start: 0;
   color: #ebb7b3;
@@ -131,21 +130,6 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ebb7b3;
-}
-
-#Top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border: none;
-  cursor: pointer;
-  background-color: none;
-  z-index: 10;
-}
-
-#Top:hover {
-  color: #ebb7b3;
 }
 
 #hero-mobile {
@@ -242,6 +226,14 @@ a {
   z-index: 10;
 }
 
+@media (max-width: 1200px) {
+  #hero .left .firstname {
+    font-size: 1.2rem;
+  }
+  #hero .right .lastname {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 650px) {
   #hero {
     display: none;
@@ -528,21 +520,23 @@ a {
   text-decoration: underline #ebb7b3 0.1rem;
   text-decoration-skip-ink: none;
 }
-@keyframes text {
-  0% {
-    top: 200vh;
-    opacity: 0;
+@media (min-width: 650px) {
+  @keyframes text {
+    0% {
+      top: 200vh;
+      opacity: 0;
+    }
+    100% {
+      top: 0;
+      opacity: 100;
+    }
   }
-  100% {
-    top: 0;
-    opacity: 100;
+  #projects .left .p-animation {
+    position: relative;
+    animation-name: text;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
-}
-#projects .left .p-animation {
-  position: relative;
-  animation-name: text;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
 }
 #projects .left p {
   padding-left: 1rem;
@@ -895,6 +889,18 @@ a {
     opacity: 1;
   }
 }
+@media (max-width: 650px) {
+  @keyframes listelement-right {
+    0% {
+      right: 20px;
+      opacity: 0;
+    }
+    100% {
+      right: 0;
+      opacity: 1;
+    }
+  }
+}
 #programming-skills .right .right-right .li-animation {
   position: relative;
   animation-name: listelement-right;
@@ -924,6 +930,18 @@ a {
   100% {
     left: 0;
     opacity: 1;
+  }
+}
+@media (max-width: 650px) {
+  @keyframes listelement-left {
+    0% {
+      left: 20px;
+      opacity: 0;
+    }
+    100% {
+      left: 0;
+      opacity: 1;
+    }
   }
 }
 #creative-skills .li-animation {

@@ -10,18 +10,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: $primary;
 }
-
-//back-to-top button
-#Top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border: none;
-  cursor: pointer;
-  background-color: none;
-  z-index: 10;
-}
-#Top:hover {
-  color: $primary;
-}

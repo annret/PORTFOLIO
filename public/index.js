@@ -70,30 +70,7 @@ options = {
     magicMouse(options);
 
 
-    //back-to-top button
-window.onscroll = function() {scrollFunction()};
-
-var backToTop = document.getElementById("Top");
-
-  function scrollFunction() 
-  {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) 
-      {
-        backToTop.style.display = "block";
-      } 
-      else 
-      {
-        backToTop.style.display = "none";
-      }
-  }
-
-  function topFunction() 
-  {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-  }
-
-
+//animations
     var elements;
     var windowHeight;
   

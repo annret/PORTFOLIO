@@ -120,6 +120,18 @@
           opacity: 1;
         }
       }
+      @media (max-width: 650px) {
+        @keyframes listelement-right {
+          0% {
+            right: 20px;
+            opacity: 0;
+          }
+          100% {
+            right: 0;
+            opacity: 1;
+          }
+        }
+      }
       .li-animation {
         position: relative;
         animation-name: listelement-right;
@@ -152,6 +164,18 @@
     100% {
       left: 0;
       opacity: 1;
+    }
+  }
+  @media (max-width: 650px) {
+    @keyframes listelement-left {
+      0% {
+        left: 20px;
+        opacity: 0;
+      }
+      100% {
+        left: 0;
+        opacity: 1;
+      }
     }
   }
   .li-animation {

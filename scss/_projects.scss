@@ -47,21 +47,24 @@
       text-decoration: underline $primary 0.1rem;
       text-decoration-skip-ink: none;
     }
-    @keyframes text {
-      0% {
-        top: 200vh;
-        opacity: 0;
+
+    @media (min-width: 650px) {
+      @keyframes text {
+        0% {
+          top: 200vh;
+          opacity: 0;
+        }
+        100% {
+          top: 0;
+          opacity: 100;
+        }
       }
-      100% {
-        top: 0;
-        opacity: 100;
+      .p-animation {
+        position: relative;
+        animation-name: text;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
       }
-    }
-    .p-animation {
-      position: relative;
-      animation-name: text;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
     }
     p {
       padding-left: 1rem;
