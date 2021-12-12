@@ -573,6 +573,11 @@ a {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  .right p,
+.left p {
+    font-size: 0.6rem;
+    line-height: 0.7rem;
+  }
 
   .mtm-title {
     padding: 0;
