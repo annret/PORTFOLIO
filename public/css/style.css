@@ -1178,18 +1178,18 @@ a {
 
 @media (max-width: 650px) {
   #contact .icon-size {
-    width: 6vw;
-    height: 6vw;
+    width: 8vw;
+    height: 8vw;
   }
   #contact .icons-container .copyright {
     font-size: 0.6rem !important;
   }
   #contact .icons-container .impressum {
-    font-size: 0.45rem !important;
+    font-size: 0.4rem !important;
     padding: 0.1rem;
   }
   #contact .icons-container .icons8 {
-    font-size: 0.6rem !important;
+    font-size: 0.35rem !important;
   }
 }
 

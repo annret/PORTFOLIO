@@ -11,7 +11,7 @@ gsap.to(sections, {
    scrub: 1,
 
     // base vertical scrolling on how wide the container is so it feels more natural.
-    end: "+=4500",
+    end: "+=2000",
   }
 });
 
