@@ -1167,10 +1167,10 @@ a {
   font-size: 0.25rem;
   width: 100%;
 }
-#contact .icons-container .icons8 {
+#contact .icons-container .link {
   align-items: flex-end;
   text-align: center;
-  font-size: 0.2rem;
+  font-size: 0.22rem;
   width: 100%;
   line-height: 0.25rem;
   padding-bottom: 0.5rem;
@@ -1194,3 +1194,76 @@ a {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* impressum */
+#impressum {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+#impressum .left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+}
+#impressum .left .impressum-h1 {
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  font-size: 8vw;
+}
+
+#impressum .left p {
+  padding-left: 2rem;
+  padding-right: 1rem;
+  text-align: center;
+}
+#impressum .right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 50%;
+  padding-bottom: 1.5rem;
+}
+#impressum .right .box-primary {
+  height: 85%;
+  position: absolute;
+  bottom: -1rem;
+  right: 0;
+  width: 95%;
+  background: #ebb7b3;
+  box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: -2;
+}
+#impressum .right .impressum-img {
+  width: 60%;
+}
+
+.back-impressum{
+  padding: 30px 40px;
+  color: #ebb7b3;
+  font-size: 20px;
+  width: 0.8rem;
+}
+@media (max-width: 650px) {
+  #impressum .box-primary {
+    width: 50% !important;
+    left: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  #impressum .title {
+    display: none;
+  }
+  #impressum .mobile {
+    display: flex;
+  }
+  #impressum .left p {
+    padding: 0.3rem;
+  }
+}
