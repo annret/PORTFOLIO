@@ -46,10 +46,12 @@ window.onload = () => {
     notificationButton.classList.add("button-grey");
   }
   if (Notification.permission === 'denied'){
-    notificationButton.classList.add('button-grey');
+    notificationButton.classList.add('button-grey');    
+    notificationButton.classList.remove('button-pink');
   }
   else {
-    notificationButton.classList.remove('button-grey');
+    notificationButton.classList.remove('button-grey');    
+    notificationButton.classList.add('button-pink');
   }
 };
 
