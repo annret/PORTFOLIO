@@ -2,10 +2,7 @@ body{
 	  font-family: sans-serif;
 	}
 	
-
-	/* Make content area fill the entire window */
-	html,
-	.fullscreen {
+html, .fullscreen {
 	  display: flex;
 	  height: 100%;
 	  margin: 0;
@@ -13,20 +10,71 @@ body{
 	  width: 100%;
 	}
 	
-
-	/* Center the content */
-	.container {
+.container {
 	  margin: auto;
 	  text-align: center;
 	}
 	
-
-	.title {
+.title {
 	  font-size: 3rem;
 	}
 
-	/* button download
-	.install-btn-hide {
-		display: none;
-	  }
-	*/
+.text{
+		margin: 2em;
+		color: lightgray;
+		font-size: 13px;
+	}
+
+.top-left{
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 2em;
+	}
+
+.bottom-left{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		writing-mode: vertical-lr;
+		transform: rotate(180deg);
+	}
+
+.bottom-right{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+	}
+
+.img{
+		width: 50px;
+		height: auto;
+	}
+
+a{
+		cursor: pointer;
+	}
+
+a:hover{
+		color: #ffc4c4;
+	}
+
+.button{
+		border: solid 2px #ffc4c4;
+		border-radius: 12px;
+		padding: 0.5em 1.5em;
+		cursor: pointer;
+	}
+
+.button:hover{
+		background-color: #ffc4c4;
+		color: black;
+	}
+
+.allow{
+	display: none;
+}
+
+.block{
+	display: none;
+}

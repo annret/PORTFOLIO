@@ -1,4 +1,4 @@
-const PWAnna = "PWAnna-v1";
+const PWAnna = "PWAnna";
 const assets = [
     "/",
     "/index.html",
@@ -18,13 +18,12 @@ self.addEventListener("install", installEvent => {
 self.addEventListener("fetch", fetchEvent => {
     fetchEvent.respondWith(
         caches.match(fetchEvent.request).then(res => {
-            //return res || fetch(fetchEvent.request);
             return fetch(fetchEvent.request);
         })
     );
 });
 
-self.addEventListener('activate', function (event) {
+self.addEventListener("activate", function (event) {
     event.waitUntil(
         caches.keys().then(function (cacheNames) {
             return Promise.all(

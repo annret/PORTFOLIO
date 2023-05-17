@@ -2,23 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Hello</title>
+    <title>PWA - Anna Rettenbacher</title>
     <link rel="stylesheet" href="./style.css">    
     <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/svg" href="logo.png">
+    <link rel="icon" type="image/svg" href="logo.svg">
     <meta name="theme-color" content="#ffc4c4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-    
-
-  
-
-
   </head>
   <body class="fullscreen">
     <div class="container">
-      <h1 class="title">Hello!</h1>
-      <a class="click-button download-index install-btn-hide" id="installbutton">download</a>
+
+      <a onclick="showNotificationText(2)"><img src="logo.svg" class="img top-left"></a>
+      <p class="text bottom-left">PWA | Anna Rettenbacher</p>
+      <p class="text bottom-right">FH Salzburg | MMT-B2020</p>
+      <a onclick="showNotificationText(1)"><h1 class="title">Hello!</h1></a>
+
+      <a class="button" id="downloadButton">download</a>
+      <a class="button" onclick="allowNotifications()">allow notifications</a>   
     </div>
   </body>
   <script language="javascript" type="text/javascript" src="index.js"></script>
