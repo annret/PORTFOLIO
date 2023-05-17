@@ -60,21 +60,27 @@ a:hover{
 	}
 
 .button{
-		border: solid 2px #ffc4c4;
+		border: solid 2px;
 		border-radius: 12px;
 		padding: 0.5em 1.5em;
+	}
+.button-pink{
+		border-color: #ffc4c4;
 		cursor: pointer;
 	}
 
-.button:hover{
+.button-pink:hover{
 		background-color: #ffc4c4;
 		color: black;
 	}
 
-.allow{
-	display: none;
+.button-grey{
+	border-color: lightgrey;
+	color: lightgrey;
 }
 
-.block{
-	display: none;
+.button-grey:hover{
+	background-color: white;
+	cursor: not-allowed;
+	color: lightgrey;
 }

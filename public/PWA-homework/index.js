@@ -8,24 +8,39 @@ if ("serviceWorker" in navigator) {
     })
 }
 
+
+/* download */
 let deferredPrompt;
-let websiteinstalled = false;
 let downloadButton = document.querySelector('#downloadButton');
+let websiteinstalled = false;
 
-window.addEventListener('promptBeforeDownload', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    console.log("finished downloading");
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  downloadButton.classList.remove("button-grey");
+  console.log("before install prompt");
 });
 
-downloadButton.addEventListener('answerPrompt', async () => {
-    deferredPrompt.prompt()
-    let result = await that.prompt.userChoice;
-    if (result && result.outcome === 'accepted') {
-        installed = true;
-    }
+downloadButton.addEventListener('click', async () => {
+  deferredPrompt.prompt();
+  let result = await that.prompt.userChoice;
+  if (result && result.outcome === 'accepted') {
+    installed = true;
+  }  
+  console.log("click");
 });
 
+window.addEventListener('appinstalled', async function (e) {
+  downloadButton.classList.remove("button-pink");
+  downloadButton.classList.add("button-grey");  
+  console.log("app installed");
+});
+
+
+/* allow notifications */
+let notificationButton = document.querySelector('#notificationButton');
+
+notificationButton.classList.remove("button-grey");
 
 function allowNotifications() {
     return new Promise(function (resolve, reject) {
@@ -36,6 +51,10 @@ function allowNotifications() {
       if (answer) {
         answer.then(resolve, reject);
       }
+      
+      notificationButton.classList.remove("button-pink");
+      notificationButton.classList.add("button-grey");  
+
     })
       .then(function (answer) {
         if (answer !== 'allowed') {
