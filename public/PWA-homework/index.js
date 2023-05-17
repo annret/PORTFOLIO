@@ -40,7 +40,19 @@ window.addEventListener('appinstalled', async function (e) {
 /* allow notifications */
 let notificationButton = document.querySelector('#notificationButton');
 
-notificationButton.classList.remove("button-grey");
+window.onload = () => {
+  if (Notification.permission === 'granted') {
+    notificationButton.classList.remove('button-pink');
+    notificationButton.classList.add("button-grey");
+  }
+  if (Notification.permission === 'denied'){
+    notificationButton.classList.add('button-grey');
+  }
+  else {
+    notificationButton.classList.remove('button-grey');
+  }
+};
+
 
 function allowNotifications() {
     return new Promise(function (resolve, reject) {
@@ -57,8 +69,8 @@ function allowNotifications() {
 
     })
       .then(function (answer) {
-        if (answer !== 'allowed') {
-          throw new Error('You blocked the notifications.');
+        if (answer !== 'granted') {
+          throw new Error('We weren\'t granted permission.');
         }
       });
   }
