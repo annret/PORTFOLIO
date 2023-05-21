@@ -1,10 +1,9 @@
 const PWAnna = "PWAnna";
 const assets = [
-    "/",
-    "/index.html",
-    "style.css",
-    "index.js",
-    "logo.png"
+    "/PWA-homework/index.html",
+    "/PWA-homework/style.css",
+    "/PWA-homework/index.js",
+    "/PWA-homework/logo.png"
   ];
 
 self.addEventListener("install", installEvent => {
