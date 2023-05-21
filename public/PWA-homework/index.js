@@ -104,8 +104,5 @@ function allowNotifications() {
     }
   
   const registration = await getSW();
-  registration.showNotification(
-    notificationTitle, 
-    options
-    );
+  registration.showNotification(notificationTitle, options);
 }
