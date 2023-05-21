@@ -2,7 +2,7 @@
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function () {
         navigator.serviceWorker
-            .register("/PWA-homework/serviceWorker.js")
+            .register("./serviceWorker.js")
             .then(res => console.log("service worker registered", res))
             .catch(err => console.log("service worker not registered", err))
     })
@@ -77,7 +77,7 @@ function allowNotifications() {
       });
   }
   function getSW() {
-    return navigator.serviceWorker.getRegistration('../service-worker.js');
+    return navigator.serviceWorker.getRegistration('../serviceWorker.js');
   }
   
   async function showNotification(i) {
@@ -104,5 +104,6 @@ function allowNotifications() {
     }
   
   const registration = await getSW();
+  console.log(registration)
   registration.showNotification(notificationTitle, options);
 }
