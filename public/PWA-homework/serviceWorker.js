@@ -1,5 +1,6 @@
 const PWAnna = "PWAnna";
 const assets = [
+    "/PWA-homework/",
     "/PWA-homework/index.html",
     "/PWA-homework/style.css",
     "/PWA-homework/index.js",
