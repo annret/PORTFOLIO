@@ -77,7 +77,7 @@ function allowNotifications() {
       });
   }
   function getSW() {
-    return navigator.serviceWorker.getRegistration('../serviceWorker.js');
+    return navigator.serviceWorker.getRegistration('./serviceWorker.js');
   }
   
   async function showNotification(i) {
