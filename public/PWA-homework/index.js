@@ -80,7 +80,7 @@ function allowNotifications() {
     return navigator.serviceWorker.getRegistration('../service-worker.js');
   }
   
-  async function showNotificationText(i) {
+  async function showNotification(i) {
     let notificationTitle
     let options
 
